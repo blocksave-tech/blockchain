@@ -1,0 +1,576 @@
+liuhy@liuhy ~ $ docker logs -f  peer0.org1.example.com 
+2018-05-14 12:57:40.988 UTC [msp] getMspConfig -> INFO 001 Loading NodeOUs
+2018-05-14 12:57:41.017 UTC [msp] GetLocalMSP -> DEBU 002 Returning existing local MSP
+2018-05-14 12:57:41.017 UTC [nodeCmd] serve -> INFO 003 Starting peer:
+ Version: 1.1.1-snapshot-849e304
+ Go version: go1.9
+ OS/Arch: linux/amd64
+ Experimental features: true
+ Chaincode:
+  Base Image Version: 0.4.6
+  Base Docker Namespace: hyperledger
+  Base Docker Label: org.hyperledger.fabric
+  Docker Namespace: hyperledger
+
+2018-05-14 12:57:41.018 UTC [msp] GetLocalMSP -> DEBU 004 Returning existing local MSP
+2018-05-14 12:57:41.018 UTC [ledgermgmt] initialize -> INFO 005 Initializing ledger mgmt
+2018-05-14 12:57:41.018 UTC [kvledger] NewProvider -> INFO 006 Initializing ledger provider
+2018-05-14 12:57:41.018 UTC [kvledger.util] CreateDirIfMissing -> DEBU 007 CreateDirIfMissing [/var/hyperledger/production/ledgersData/ledgerProvider/]
+2018-05-14 12:57:41.018 UTC [kvledger.util] logDirStatus -> DEBU 008 Before creating dir - [/var/hyperledger/production/ledgersData/ledgerProvider/] does not exist
+2018-05-14 12:57:41.018 UTC [kvledger.util] logDirStatus -> DEBU 009 After creating dir - [/var/hyperledger/production/ledgersData/ledgerProvider/] exists
+2018-05-14 12:57:41.022 UTC [kvledger.util] CreateDirIfMissing -> DEBU 00a CreateDirIfMissing [/var/hyperledger/production/ledgersData/chains/index/]
+2018-05-14 12:57:41.022 UTC [kvledger.util] logDirStatus -> DEBU 00b Before creating dir - [/var/hyperledger/production/ledgersData/chains/index/] does not exist
+2018-05-14 12:57:41.022 UTC [kvledger.util] logDirStatus -> DEBU 00c After creating dir - [/var/hyperledger/production/ledgersData/chains/index/] exists
+2018-05-14 12:57:41.025 UTC [kvledger.util] CreateDirIfMissing -> DEBU 00d CreateDirIfMissing [/var/hyperledger/production/ledgersData/pvtdataStore/]
+2018-05-14 12:57:41.025 UTC [kvledger.util] logDirStatus -> DEBU 00e Before creating dir - [/var/hyperledger/production/ledgersData/pvtdataStore/] does not exist
+2018-05-14 12:57:41.025 UTC [kvledger.util] logDirStatus -> DEBU 00f After creating dir - [/var/hyperledger/production/ledgersData/pvtdataStore/] exists
+2018-05-14 12:57:41.031 UTC [stateleveldb] NewVersionedDBProvider -> DEBU 010 constructing VersionedDBProvider dbPath=/var/hyperledger/production/ledgersData/stateLeveldb
+2018-05-14 12:57:41.031 UTC [kvledger.util] CreateDirIfMissing -> DEBU 011 CreateDirIfMissing [/var/hyperledger/production/ledgersData/stateLeveldb/]
+2018-05-14 12:57:41.031 UTC [kvledger.util] logDirStatus -> DEBU 012 Before creating dir - [/var/hyperledger/production/ledgersData/stateLeveldb/] does not exist
+2018-05-14 12:57:41.031 UTC [kvledger.util] logDirStatus -> DEBU 013 After creating dir - [/var/hyperledger/production/ledgersData/stateLeveldb/] exists
+2018-05-14 12:57:41.034 UTC [historyleveldb] NewHistoryDBProvider -> DEBU 014 constructing HistoryDBProvider dbPath=/var/hyperledger/production/ledgersData/historyLeveldb
+2018-05-14 12:57:41.034 UTC [kvledger.util] CreateDirIfMissing -> DEBU 015 CreateDirIfMissing [/var/hyperledger/production/ledgersData/historyLeveldb/]
+2018-05-14 12:57:41.034 UTC [kvledger.util] logDirStatus -> DEBU 016 Before creating dir - [/var/hyperledger/production/ledgersData/historyLeveldb/] does not exist
+2018-05-14 12:57:41.034 UTC [kvledger.util] logDirStatus -> DEBU 017 After creating dir - [/var/hyperledger/production/ledgersData/historyLeveldb/] exists
+2018-05-14 12:57:41.037 UTC [kvledger] NewProvider -> INFO 018 ledger provider Initialized
+2018-05-14 12:57:41.037 UTC [kvledger] recoverUnderConstructionLedger -> DEBU 019 Recovering under construction ledger
+2018-05-14 12:57:41.037 UTC [kvledger] recoverUnderConstructionLedger -> DEBU 01a No under construction ledger found. Quitting recovery
+2018-05-14 12:57:41.037 UTC [ledgermgmt] initialize -> INFO 01b ledger mgmt initialized
+2018-05-14 12:57:41.037 UTC [peer] func1 -> INFO 01c Auto-detected peer address: 172.19.0.3:7051
+2018-05-14 12:57:41.037 UTC [peer] func1 -> INFO 01d Returning peer0.org1.example.com:7051
+2018-05-14 12:57:41.037 UTC [peer] func1 -> INFO 01e Auto-detected peer address: 172.19.0.3:7051
+2018-05-14 12:57:41.037 UTC [peer] func1 -> INFO 01f Returning peer0.org1.example.com:7051
+2018-05-14 12:57:41.039 UTC [eventhub_producer] AddEventType -> DEBU 020 Registering BLOCK
+2018-05-14 12:57:41.039 UTC [eventhub_producer] AddEventType -> DEBU 021 Registering CHAINCODE
+2018-05-14 12:57:41.039 UTC [eventhub_producer] AddEventType -> DEBU 022 Registering REJECTION
+2018-05-14 12:57:41.039 UTC [eventhub_producer] AddEventType -> DEBU 023 Registering REGISTER
+2018-05-14 12:57:41.039 UTC [eventhub_producer] AddEventType -> DEBU 024 Registering FILTEREDBLOCK
+2018-05-14 12:57:41.039 UTC [eventhub_producer] start -> INFO 025 Event processor started
+2018-05-14 12:57:41.039 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 026 Entering computeChaincodeEndpoint with peerHostname: peer0.org1.example.com
+2018-05-14 12:57:41.039 UTC [nodeCmd] computeChaincodeEndpoint -> INFO 027 Exit with ccEndpoint: peer0.org1.example.com:7052
+2018-05-14 12:57:41.039 UTC [nodeCmd] createChaincodeServer -> WARN 028 peer.chaincodeListenAddress is not set, using peer0.org1.example.com:7052
+2018-05-14 12:57:41.041 UTC [nodeCmd] registerChaincodeSupport -> DEBU 029 Chaincode startup timeout value set to 5m0s
+2018-05-14 12:57:41.041 UTC [chaincode] NewChaincodeSupport -> INFO 02a Chaincode support using peerAddress: peer0.org1.example.com:7052
+2018-05-14 12:57:41.041 UTC [chaincode] NewChaincodeSupport -> DEBU 02b Turn off keepalive(value 0)
+2018-05-14 12:57:41.041 UTC [chaincode] NewChaincodeSupport -> DEBU 02c Setting execute timeout value to 30s
+2018-05-14 12:57:41.041 UTC [chaincode] getLogLevelFromViper -> DEBU 02d CORE_CHAINCODE_LEVEL set to level info
+2018-05-14 12:57:41.041 UTC [chaincode] getLogLevelFromViper -> DEBU 02e CORE_CHAINCODE_SHIM set to level warning
+2018-05-14 12:57:41.042 UTC [sccapi] registerSysCC -> INFO 02f system chaincode cscc(github.com/hyperledger/fabric/core/scc/cscc) registered
+2018-05-14 12:57:41.042 UTC [sccapi] registerSysCC -> INFO 030 system chaincode lscc(github.com/hyperledger/fabric/core/scc/lscc) registered
+2018-05-14 12:57:41.042 UTC [sccapi] registerSysCC -> INFO 031 system chaincode escc(github.com/hyperledger/fabric/core/scc/escc) registered
+2018-05-14 12:57:41.042 UTC [sccapi] registerSysCC -> INFO 032 system chaincode vscc(github.com/hyperledger/fabric/core/scc/vscc) registered
+2018-05-14 12:57:41.042 UTC [sccapi] registerSysCC -> INFO 033 system chaincode qscc(github.com/hyperledger/fabric/core/chaincode/qscc) registered
+2018-05-14 12:57:41.042 UTC [sccapi] registerSysCC -> INFO 034 system chaincode samplesyscc(github.com/inklabsfoundation/inkchain/core/scc/samplesyscc) registered
+2018-05-14 12:57:41.042 UTC [nodeCmd] serve -> DEBU 035 Running peer
+2018-05-14 12:57:41.043 UTC [viperutil] getKeysRecursively -> DEBU 036 Found map[string]interface{} value for peer.handlers
+2018-05-14 12:57:41.043 UTC [viperutil] unmarshalJSON -> DEBU 037 Unmarshal JSON: value is not a string: [map[name:DefaultAuth] map[name:ExpirationCheck]]
+2018-05-14 12:57:41.043 UTC [viperutil] getKeysRecursively -> DEBU 038 Found real value for peer.handlers.authFilters setting to []interface {} [map[name:DefaultAuth] map[name:ExpirationCheck]]
+2018-05-14 12:57:41.043 UTC [viperutil] unmarshalJSON -> DEBU 039 Unmarshal JSON: value is not a string: [map[name:DefaultDecorator]]
+2018-05-14 12:57:41.043 UTC [viperutil] getKeysRecursively -> DEBU 03a Found real value for peer.handlers.decorators setting to []interface {} [map[name:DefaultDecorator]]
+2018-05-14 12:57:41.043 UTC [viperutil] EnhancedExactUnmarshalKey -> DEBU 03b map[peer.handlers:map[authFilters:[map[name:DefaultAuth] map[name:ExpirationCheck]] decorators:[map[name:DefaultDecorator]]]]
+2018-05-14 12:57:41.043 UTC [msp] GetLocalMSP -> DEBU 03c Returning existing local MSP
+2018-05-14 12:57:41.044 UTC [msp] GetDefaultSigningIdentity -> DEBU 03d Obtaining default signing identity
+2018-05-14 12:57:41.044 UTC [gossip/service] func1 -> INFO 03e Initialize gossip with endpoint peer0.org1.example.com:7051 and bootstrap set [peer1.org1.example.com:7051]
+2018-05-14 12:57:41.046 UTC [msp] GetLocalMSP -> DEBU 03f Returning existing local MSP
+2018-05-14 12:57:41.046 UTC [msp] DeserializeIdentity -> INFO 040 Obtaining identity
+2018-05-14 12:57:41.047 UTC [msp/identity] newIdentity -> DEBU 041 Creating identity instance for cert -----BEGIN CERTIFICATE-----
+MIICKDCCAc+gAwIBAgIRAJLH+HUvbadDEJpVkHlbY6MwCgYIKoZIzj0EAwIwczEL
+MAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDVNhbiBG
+cmFuY2lzY28xGTAXBgNVBAoTEG9yZzEuZXhhbXBsZS5jb20xHDAaBgNVBAMTE2Nh
+Lm9yZzEuZXhhbXBsZS5jb20wHhcNMTgwNTE0MTI1MjM5WhcNMjgwNTExMTI1MjM5
+WjBqMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMN
+U2FuIEZyYW5jaXNjbzENMAsGA1UECxMEcGVlcjEfMB0GA1UEAxMWcGVlcjAub3Jn
+MS5leGFtcGxlLmNvbTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABKZml9NeCz84
+zXQwtOZ2oF6IobID3gOO5YdtaRTeuzFBgv1wvWS9DBlt8FCgxQG9aWR8x7vlMtGQ
+K8ZybJHowIKjTTBLMA4GA1UdDwEB/wQEAwIHgDAMBgNVHRMBAf8EAjAAMCsGA1Ud
+IwQkMCKAIMQ19fmdAue6diaIgGkTndV83wPhQk/WwxzGqVR8Myb/MAoGCCqGSM49
+BAMCA0cAMEQCIGeJm6Y2Kl/sZz61/hNZpcoMahnBta+zPvKV3bD6GHKkAiBXNqmz
+szieTsX5zfucjo+5ScGBI1nrIa2YU9+uKdXRYg==
+-----END CERTIFICATE-----
+2018-05-14 12:57:41.047 UTC [msp] GetLocalMSP -> DEBU 042 Returning existing local MSP
+2018-05-14 12:57:41.048 UTC [msp] GetLocalMSP -> DEBU 043 Returning existing local MSP
+2018-05-14 12:57:41.048 UTC [msp] Validate -> DEBU 044 MSP Org1MSP validating identity
+2018-05-14 12:57:41.048 UTC [msp] GetLocalMSP -> DEBU 045 Returning existing local MSP
+2018-05-14 12:57:41.048 UTC [msp] GetLocalMSP -> DEBU 046 Returning existing local MSP
+2018-05-14 12:57:41.048 UTC [msp] Validate -> DEBU 047 MSP Org1MSP validating identity
+2018-05-14 12:57:41.049 UTC [gossip/discovery] NewDiscoveryService -> INFO 048 Started {peer0.org1.example.com:7051 [] [171 168 147 180 68 236 43 159 202 198 118 32 73 80 237 169 118 124 65 18 246 198 237 58 116 164 162 142 209 214 143 21] peer0.org1.example.com:7051 <nil>} incTime is 1526302661049434769
+2018-05-14 12:57:41.049 UTC [gossip/gossip] NewGossipService -> INFO 049 Creating gossip service with self membership of {peer0.org1.example.com:7051 [] [171 168 147 180 68 236 43 159 202 198 118 32 73 80 237 169 118 124 65 18 246 198 237 58 116 164 162 142 209 214 143 21] peer0.org1.example.com:7051 <nil>}
+2018-05-14 12:57:41.050 UTC [msp] GetLocalMSP -> DEBU 04a Returning existing local MSP
+2018-05-14 12:57:41.050 UTC [msp] GetLocalMSP -> DEBU 04b Returning existing local MSP
+2018-05-14 12:57:41.050 UTC [msp] Validate -> DEBU 04c MSP Org1MSP validating identity
+2018-05-14 12:57:41.050 UTC [gossip/discovery] periodicalReconnectToDead -> DEBU 04d Sleeping 25s
+2018-05-14 12:57:41.050 UTC [msp] GetLocalMSP -> DEBU 04e Returning existing local MSP
+2018-05-14 12:57:41.051 UTC [msp] GetLocalMSP -> DEBU 04f Returning existing local MSP
+2018-05-14 12:57:41.051 UTC [msp] Validate -> DEBU 050 MSP Org1MSP validating identity
+2018-05-14 12:57:41.051 UTC [msp] GetLocalMSP -> DEBU 051 Returning existing local MSP
+2018-05-14 12:57:41.051 UTC [msp] GetDefaultSigningIdentity -> DEBU 052 Obtaining default signing identity
+2018-05-14 12:57:41.051 UTC [msp/identity] Sign -> DEBU 053 Sign: plaintext: 1801AA01DB060A20ABA893B444EC2B9F...455254494649434154452D2D2D2D2D0A 
+2018-05-14 12:57:41.051 UTC [msp/identity] Sign -> DEBU 054 Sign: digest: 890E72644E1B866F425EA1ECDBCC12C1BFEEFF1BFA3D294A1FB4E7C282301FB2 
+2018-05-14 12:57:41.051 UTC [gossip/gossip] start -> INFO 056 Gossip instance peer0.org1.example.com:7051 started
+
+2018-05-14 12:57:41.051 UTC [ccprovider] NewCCContext -> DEBU 058 NewCCCC (chain=,chaincode=cscc,version=1.1.1-snapshot-849e304,txid=7e275956-db8b-4fcf-b18e-4c90725d519d,syscc=true,proposal=0x0,canname=cscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.051 UTC [gossip/discovery] periodicalSendAlive -> DEBU 057 Sleeping 5s
+
+
+2018-05-14 12:57:41.051 UTC [gossip/gossip] syncDiscovery -> DEBU 055 Entering discovery sync with interval 4s
+2018-05-14 12:57:41.051 UTC [gossip/discovery] Connect -> DEBU 05a Entering {peer1.org1.example.com:7051 [] [] peer1.org1.example.com:7051 <nil>}
+2018-05-14 12:57:41.052 UTC [gossip/discovery] Connect -> DEBU 05b Exiting
+2018-05-14 12:57:41.051 UTC [chaincode] launchAndWaitForRegister -> DEBU 059 chaincode cscc:1.1.1-snapshot-849e304 is being launched  ????????????????????
+
+2018-05-14 12:57:41.052 UTC [chaincode] getLaunchConfigs -> DEBU 05c Executable is chaincode
+2018-05-14 12:57:41.052 UTC [chaincode] getLaunchConfigs -> DEBU 05d Args [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.052 UTC [chaincode] getLaunchConfigs -> DEBU 05e Envs [CORE_CHAINCODE_ID_NAME=cscc:1.1.1-snapshot-849e304 CORE_PEER_TLS_ENABLED=false CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-05-14 12:57:41.052 UTC [chaincode] getLaunchConfigs -> DEBU 05f FilesToUpload []
+2018-05-14 12:57:41.052 UTC [chaincode] launch -> DEBU 060 start container: cscc:1.1.1-snapshot-849e304(networkid:dev,peerid:peer0.org1.example.com)
+2018-05-14 12:57:41.052 UTC [chaincode] launch -> DEBU 061 start container with args: chaincode -peer.address=peer0.org1.example.com:7052
+2018-05-14 12:57:41.052 UTC [chaincode] launch -> DEBU 062 start container with env:
+	CORE_CHAINCODE_ID_NAME=cscc:1.1.1-snapshot-849e304
+	CORE_PEER_TLS_ENABLED=false
+	CORE_CHAINCODE_LOGGING_LEVEL=info
+	CORE_CHAINCODE_LOGGING_SHIM=warning
+	CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-05-14 12:57:41.052 UTC [container] lockContainer -> DEBU 063 waiting for container(cscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.052 UTC [container] lockContainer -> DEBU 064 got container (cscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.052 UTC [inproccontroller] getInstance -> DEBU 065 chaincode instance created for cscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.052 UTC [container] unlockContainer -> DEBU 066 container lock deleted(cscc-1.1.1-snapshot-849e304)
+2018-05-14 12:57:41.052 UTC [inproccontroller] func2 -> DEBU 067 chaincode-support started for  cscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.052 UTC [chaincode] HandleChaincodeStream -> DEBU 068 Current context deadline = 0001-01-01 00:00:00 +0000 UTC, ok = false
+2018-05-14 12:57:41.052 UTC [inproccontroller] func1 -> DEBU 069 chaincode started for cscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.052 UTC [shim] StartInProc -> DEBU 06a in proc [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.052 UTC [shim] StartInProc -> DEBU 06b starting chat with peer using name=cscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.052 UTC [shim] chatWithPeer -> DEBU 06c Registering.. sending REGISTER
+2018-05-14 12:57:41.052 UTC [chaincode] processStream -> DEBU 06d []Received message REGISTER from shim
+2018-05-14 12:57:41.052 UTC [chaincode] handleMessage -> DEBU 06e []Fabric side Handling ChaincodeMessage of type: REGISTER in state created
+2018-05-14 12:57:41.052 UTC [chaincode] beforeRegisterEvent -> DEBU 06f Received REGISTER in state created
+2018-05-14 12:57:41.052 UTC [chaincode] registerHandler -> DEBU 070 registered handler complete for chaincode cscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.052 UTC [chaincode] beforeRegisterEvent -> DEBU 071 Got REGISTER for chaincodeID = name:"cscc:1.1.1-snapshot-849e304" , sending back REGISTERED
+2018-05-14 12:57:41.052 UTC [chaincode] notifyDuringStartup -> DEBU 072 Notifying during startup
+2018-05-14 12:57:41.052 UTC [shim] func1 -> DEBU 073 []Received message REGISTERED from shim
+2018-05-14 12:57:41.052 UTC [shim] handleMessage -> DEBU 074 []Handling ChaincodeMessage of type: REGISTERED(state:created)
+2018-05-14 12:57:41.052 UTC [shim] beforeRegistered -> DEBU 075 Received REGISTERED, ready for invocations
+2018-05-14 12:57:41.052 UTC [chaincode] func1 -> DEBU 076 chaincode cscc:1.1.1-snapshot-849e304 launch seq completed
+2018-05-14 12:57:41.052 UTC [chaincode] ready -> DEBU 077 sending READY
+2018-05-14 12:57:41.052 UTC [chaincode] setChaincodeProposal -> DEBU 078 Setting chaincode proposal context...
+2018-05-14 12:57:41.052 UTC [chaincode] processStream -> DEBU 079 [7e275956]Move state message READY
+2018-05-14 12:57:41.052 UTC [chaincode] handleMessage -> DEBU 07a [7e275956]Fabric side Handling ChaincodeMessage of type: READY in state established
+2018-05-14 12:57:41.052 UTC [chaincode] enterReadyState -> DEBU 07b [7e275956]Entered state ready
+2018-05-14 12:57:41.052 UTC [chaincode] notify -> DEBU 07c notifying Txid:7e275956-db8b-4fcf-b18e-4c90725d519d, channelID:
+2018-05-14 12:57:41.052 UTC [chaincode] processStream -> DEBU 07d [7e275956]sending state message READY
+2018-05-14 12:57:41.052 UTC [shim] func1 -> DEBU 07e [7e275956]Received message READY from shim
+2018-05-14 12:57:41.052 UTC [chaincode] Launch -> DEBU 07f sending init completed
+2018-05-14 12:57:41.052 UTC [shim] handleMessage -> DEBU 080 [7e275956]Handling ChaincodeMessage of type: READY(state:established)
+2018-05-14 12:57:41.052 UTC [chaincode] Launch -> DEBU 081 LaunchChaincode complete
+
+2018-05-14 12:57:41.052 UTC [chaincode] Execute -> DEBU 082 Entry
+2018-05-14 12:57:41.052 UTC [chaincode] Execute -> DEBU 084 chaincode canonical name: cscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.053 UTC [chaincode] sendExecuteMessage -> DEBU 085 [7e275956]Inside sendExecuteMessage. Message INIT
+2018-05-14 12:57:41.053 UTC [chaincode] setChaincodeProposal -> DEBU 086 Setting chaincode proposal context...
+2018-05-14 12:57:41.053 UTC [chaincode] sendExecuteMessage -> DEBU 087 [7e275956]sendExecuteMsg trigger event INIT
+2018-05-14 12:57:41.053 UTC [chaincode] processStream -> DEBU 088 [7e275956]Move state message INIT
+2018-05-14 12:57:41.053 UTC [chaincode] handleMessage -> DEBU 089 [7e275956]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+2018-05-14 12:57:41.053 UTC [chaincode] filterError -> DEBU 08a Ignoring NoTransitionError: no transition
+2018-05-14 12:57:41.052 UTC [msp] GetLocalMSP -> DEBU 083 Returning existing local MSP
+2018-05-14 12:57:41.053 UTC [msp] GetDefaultSigningIdentity -> DEBU 08c Obtaining default signing identity
+2018-05-14 12:57:41.053 UTC [msp/identity] Sign -> DEBU 08d Sign: plaintext: 18012A88070A3F0A1B70656572302E6F...455254494649434154452D2D2D2D2D0A 
+2018-05-14 12:57:41.053 UTC [msp/identity] Sign -> DEBU 08e Sign: digest: 1436C2A36039AE52F30DF8E8B0B18F79DE5D6670D990AE21479FA81A51ED6352 
+2018-05-14 12:57:41.053 UTC [chaincode] processStream -> DEBU 08b [7e275956]sending state message INIT
+2018-05-14 12:57:41.053 UTC [shim] func1 -> DEBU 08f [7e275956]Received message INIT from shim
+2018-05-14 12:57:41.053 UTC [shim] handleMessage -> DEBU 090 [7e275956]Handling ChaincodeMessage of type: INIT(state:ready)
+2018-05-14 12:57:41.053 UTC [shim] beforeInit -> DEBU 091 Entered state ready
+2018-05-14 12:57:41.053 UTC [shim] beforeInit -> DEBU 092 [7e275956]Received INIT, initializing chaincode
+2018-05-14 12:57:41.053 UTC [cscc] Init -> INFO 093 Init CSCC
+2018-05-14 12:57:41.053 UTC [msp] GetLocalMSP -> DEBU 094 Returning existing local MSP
+2018-05-14 12:57:41.053 UTC [msp] GetDefaultSigningIdentity -> DEBU 095 Obtaining default signing identity
+2018-05-14 12:57:41.053 UTC [msp/identity] Sign -> DEBU 096 Sign: plaintext: 0A1B70656572302E6F7267312E6578616D706C652E636F6D3A37303531 
+2018-05-14 12:57:41.053 UTC [msp/identity] Sign -> DEBU 097 Sign: digest: A785FC0B61B5045A71C0FA6B50D12EB1E6F0CDB152C6F79E6575060F54022160 
+2018-05-14 12:57:41.053 UTC [msp] GetLocalMSP -> DEBU 098 Returning existing local MSP
+2018-05-14 12:57:41.053 UTC [shim] func1 -> DEBU 099 [7e275956]Init get response status: 200
+2018-05-14 12:57:41.053 UTC [shim] func1 -> DEBU 09a [7e275956]Init succeeded. Sending COMPLETED
+2018-05-14 12:57:41.054 UTC [shim] func1 -> DEBU 09b [7e275956]Move state message COMPLETED
+2018-05-14 12:57:41.054 UTC [shim] handleMessage -> DEBU 09c [7e275956]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-14 12:57:41.054 UTC [shim] func1 -> DEBU 09d [7e275956]send state message COMPLETED
+2018-05-14 12:57:41.054 UTC [chaincode] processStream -> DEBU 09e [7e275956]Received message COMPLETED from shim
+2018-05-14 12:57:41.054 UTC [chaincode] handleMessage -> DEBU 09f [7e275956]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-14 12:57:41.054 UTC [chaincode] handleMessage -> DEBU 0a0 [7e275956-db8b-4fcf-b18e-4c90725d519d]HandleMessage- COMPLETED. Notify
+2018-05-14 12:57:41.054 UTC [chaincode] notify -> DEBU 0a1 notifying Txid:7e275956-db8b-4fcf-b18e-4c90725d519d, channelID:
+
+2018-05-14 12:57:41.054 UTC [chaincode] Execute -> DEBU 0a2 Exit ????????????
+
+2018-05-14 12:57:41.054 UTC [sccapi] deploySysCC -> INFO 0a3 system chaincode cscc/(github.com/hyperledger/fabric/core/scc/cscc) deployed
+
+
+
+2018-05-14 12:57:41.054 UTC [ccprovider] NewCCContext -> DEBU 0a4 NewCCCC (chain=,chaincode=lscc,version=1.1.1-snapshot-849e304,txid=b90581b3-b431-4d7a-b773-f5bb9aa24afe,syscc=true,proposal=0x0,canname=lscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.054 UTC [chaincode] launchAndWaitForRegister -> DEBU 0a5 chaincode lscc:1.1.1-snapshot-849e304 is being launched
+
+2018-05-14 12:57:41.054 UTC [chaincode] getLaunchConfigs -> DEBU 0a6 Executable is chaincode
+2018-05-14 12:57:41.054 UTC [chaincode] getLaunchConfigs -> DEBU 0a7 Args [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.054 UTC [chaincode] getLaunchConfigs -> DEBU 0a8 Envs [CORE_CHAINCODE_ID_NAME=lscc:1.1.1-snapshot-849e304 CORE_PEER_TLS_ENABLED=false CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-05-14 12:57:41.054 UTC [chaincode] getLaunchConfigs -> DEBU 0a9 FilesToUpload []
+2018-05-14 12:57:41.054 UTC [chaincode] launch -> DEBU 0aa start container: lscc:1.1.1-snapshot-849e304(networkid:dev,peerid:peer0.org1.example.com)
+2018-05-14 12:57:41.054 UTC [chaincode] launch -> DEBU 0ab start container with args: chaincode -peer.address=peer0.org1.example.com:7052
+2018-05-14 12:57:41.054 UTC [chaincode] launch -> DEBU 0ac start container with env:
+	CORE_CHAINCODE_ID_NAME=lscc:1.1.1-snapshot-849e304
+	CORE_PEER_TLS_ENABLED=false
+	CORE_CHAINCODE_LOGGING_LEVEL=info
+	CORE_CHAINCODE_LOGGING_SHIM=warning
+	CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-05-14 12:57:41.054 UTC [container] lockContainer -> DEBU 0ad waiting for container(lscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.054 UTC [container] lockContainer -> DEBU 0ae got container (lscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.054 UTC [inproccontroller] getInstance -> DEBU 0af chaincode instance created for lscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.054 UTC [container] unlockContainer -> DEBU 0b0 container lock deleted(lscc-1.1.1-snapshot-849e304)
+2018-05-14 12:57:41.054 UTC [inproccontroller] func2 -> DEBU 0b1 chaincode-support started for  lscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.054 UTC [chaincode] HandleChaincodeStream -> DEBU 0b2 Current context deadline = 0001-01-01 00:00:00 +0000 UTC, ok = false
+2018-05-14 12:57:41.054 UTC [inproccontroller] func1 -> DEBU 0b3 chaincode started for lscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.054 UTC [shim] StartInProc -> DEBU 0b4 in proc [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.054 UTC [shim] StartInProc -> DEBU 0b5 starting chat with peer using name=lscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.054 UTC [shim] chatWithPeer -> DEBU 0b6 Registering.. sending REGISTER
+2018-05-14 12:57:41.054 UTC [chaincode] processStream -> DEBU 0b7 []Received message REGISTER from shim
+2018-05-14 12:57:41.055 UTC [chaincode] handleMessage -> DEBU 0b8 []Fabric side Handling ChaincodeMessage of type: REGISTER in state created
+2018-05-14 12:57:41.055 UTC [chaincode] beforeRegisterEvent -> DEBU 0b9 Received REGISTER in state created
+2018-05-14 12:57:41.055 UTC [chaincode] registerHandler -> DEBU 0ba registered handler complete for chaincode lscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.055 UTC [chaincode] beforeRegisterEvent -> DEBU 0bb Got REGISTER for chaincodeID = name:"lscc:1.1.1-snapshot-849e304" , sending back REGISTERED
+2018-05-14 12:57:41.055 UTC [chaincode] notifyDuringStartup -> DEBU 0bc Notifying during startup
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0bd []Received message REGISTERED from shim
+2018-05-14 12:57:41.055 UTC [shim] handleMessage -> DEBU 0be []Handling ChaincodeMessage of type: REGISTERED(state:created)
+2018-05-14 12:57:41.055 UTC [shim] beforeRegistered -> DEBU 0bf Received REGISTERED, ready for invocations
+2018-05-14 12:57:41.055 UTC [chaincode] func1 -> DEBU 0c0 chaincode lscc:1.1.1-snapshot-849e304 launch seq completed
+2018-05-14 12:57:41.055 UTC [chaincode] ready -> DEBU 0c1 sending READY
+2018-05-14 12:57:41.055 UTC [chaincode] setChaincodeProposal -> DEBU 0c2 Setting chaincode proposal context...
+2018-05-14 12:57:41.055 UTC [chaincode] processStream -> DEBU 0c3 [b90581b3]Move state message READY
+2018-05-14 12:57:41.055 UTC [chaincode] handleMessage -> DEBU 0c4 [b90581b3]Fabric side Handling ChaincodeMessage of type: READY in state established
+2018-05-14 12:57:41.055 UTC [chaincode] enterReadyState -> DEBU 0c5 [b90581b3]Entered state ready
+2018-05-14 12:57:41.055 UTC [chaincode] notify -> DEBU 0c6 notifying Txid:b90581b3-b431-4d7a-b773-f5bb9aa24afe, channelID:
+2018-05-14 12:57:41.055 UTC [chaincode] processStream -> DEBU 0c7 [b90581b3]sending state message READY
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0c8 [b90581b3]Received message READY from shim
+2018-05-14 12:57:41.055 UTC [shim] handleMessage -> DEBU 0c9 [b90581b3]Handling ChaincodeMessage of type: READY(state:established)
+2018-05-14 12:57:41.055 UTC [chaincode] Launch -> DEBU 0ca sending init completed
+2018-05-14 12:57:41.055 UTC [chaincode] Launch -> DEBU 0cb LaunchChaincode complete
+2018-05-14 12:57:41.055 UTC [chaincode] Execute -> DEBU 0cc Entry
+2018-05-14 12:57:41.055 UTC [chaincode] Execute -> DEBU 0cd chaincode canonical name: lscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.055 UTC [chaincode] sendExecuteMessage -> DEBU 0ce [b90581b3]Inside sendExecuteMessage. Message INIT
+2018-05-14 12:57:41.055 UTC [chaincode] setChaincodeProposal -> DEBU 0cf Setting chaincode proposal context...
+2018-05-14 12:57:41.055 UTC [chaincode] sendExecuteMessage -> DEBU 0d0 [b90581b3]sendExecuteMsg trigger event INIT
+2018-05-14 12:57:41.055 UTC [chaincode] processStream -> DEBU 0d1 [b90581b3]Move state message INIT
+2018-05-14 12:57:41.055 UTC [chaincode] handleMessage -> DEBU 0d2 [b90581b3]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+2018-05-14 12:57:41.055 UTC [chaincode] filterError -> DEBU 0d3 Ignoring NoTransitionError: no transition
+2018-05-14 12:57:41.055 UTC [chaincode] processStream -> DEBU 0d4 [b90581b3]sending state message INIT
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0d5 [b90581b3]Received message INIT from shim
+2018-05-14 12:57:41.055 UTC [shim] handleMessage -> DEBU 0d6 [b90581b3]Handling ChaincodeMessage of type: INIT(state:ready)
+2018-05-14 12:57:41.055 UTC [shim] beforeInit -> DEBU 0d7 Entered state ready
+2018-05-14 12:57:41.055 UTC [shim] beforeInit -> DEBU 0d8 [b90581b3]Received INIT, initializing chaincode
+2018-05-14 12:57:41.055 UTC [msp] GetLocalMSP -> DEBU 0d9 Returning existing local MSP
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0da [b90581b3]Init get response status: 200
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0db [b90581b3]Init succeeded. Sending COMPLETED
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0dc [b90581b3]Move state message COMPLETED
+2018-05-14 12:57:41.055 UTC [shim] handleMessage -> DEBU 0dd [b90581b3]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-14 12:57:41.055 UTC [shim] func1 -> DEBU 0de [b90581b3]send state message COMPLETED
+2018-05-14 12:57:41.055 UTC [chaincode] processStream -> DEBU 0df [b90581b3]Received message COMPLETED from shim
+2018-05-14 12:57:41.055 UTC [chaincode] handleMessage -> DEBU 0e0 [b90581b3]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-14 12:57:41.055 UTC [chaincode] handleMessage -> DEBU 0e1 [b90581b3-b431-4d7a-b773-f5bb9aa24afe]HandleMessage- COMPLETED. Notify
+2018-05-14 12:57:41.056 UTC [chaincode] notify -> DEBU 0e2 notifying Txid:b90581b3-b431-4d7a-b773-f5bb9aa24afe, channelID:
+2018-05-14 12:57:41.056 UTC [chaincode] Execute -> DEBU 0e3 Exit
+2018-05-14 12:57:41.056 UTC [sccapi] deploySysCC -> INFO 0e4 system chaincode lscc/(github.com/hyperledger/fabric/core/scc/lscc) deployed
+2018-05-14 12:57:41.056 UTC [ccprovider] NewCCContext -> DEBU 0e5 NewCCCC (chain=,chaincode=escc,version=1.1.1-snapshot-849e304,txid=3f1ac4bd-8fd5-4934-9cc6-e13afaea6979,syscc=true,proposal=0x0,canname=escc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.056 UTC [chaincode] launchAndWaitForRegister -> DEBU 0e6 chaincode escc:1.1.1-snapshot-849e304 is being launched
+2018-05-14 12:57:41.056 UTC [chaincode] getLaunchConfigs -> DEBU 0e7 Executable is chaincode
+2018-05-14 12:57:41.056 UTC [chaincode] getLaunchConfigs -> DEBU 0e8 Args [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.056 UTC [chaincode] getLaunchConfigs -> DEBU 0e9 Envs [CORE_CHAINCODE_ID_NAME=escc:1.1.1-snapshot-849e304 CORE_PEER_TLS_ENABLED=false CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-05-14 12:57:41.056 UTC [chaincode] getLaunchConfigs -> DEBU 0ea FilesToUpload []
+2018-05-14 12:57:41.056 UTC [chaincode] launch -> DEBU 0eb start container: escc:1.1.1-snapshot-849e304(networkid:dev,peerid:peer0.org1.example.com)
+2018-05-14 12:57:41.056 UTC [chaincode] launch -> DEBU 0ec start container with args: chaincode -peer.address=peer0.org1.example.com:7052
+2018-05-14 12:57:41.056 UTC [chaincode] launch -> DEBU 0ed start container with env:
+	CORE_CHAINCODE_ID_NAME=escc:1.1.1-snapshot-849e304
+	CORE_PEER_TLS_ENABLED=false
+	CORE_CHAINCODE_LOGGING_LEVEL=info
+	CORE_CHAINCODE_LOGGING_SHIM=warning
+	CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-05-14 12:57:41.056 UTC [container] lockContainer -> DEBU 0ee waiting for container(escc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.056 UTC [container] lockContainer -> DEBU 0ef got container (escc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.056 UTC [inproccontroller] getInstance -> DEBU 0f0 chaincode instance created for escc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.056 UTC [container] unlockContainer -> DEBU 0f1 container lock deleted(escc-1.1.1-snapshot-849e304)
+2018-05-14 12:57:41.056 UTC [inproccontroller] func2 -> DEBU 0f2 chaincode-support started for  escc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.056 UTC [chaincode] HandleChaincodeStream -> DEBU 0f3 Current context deadline = 0001-01-01 00:00:00 +0000 UTC, ok = false
+2018-05-14 12:57:41.056 UTC [inproccontroller] func1 -> DEBU 0f4 chaincode started for escc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.056 UTC [shim] StartInProc -> DEBU 0f5 in proc [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.056 UTC [shim] StartInProc -> DEBU 0f6 starting chat with peer using name=escc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.056 UTC [shim] chatWithPeer -> DEBU 0f7 Registering.. sending REGISTER
+2018-05-14 12:57:41.056 UTC [chaincode] processStream -> DEBU 0f8 []Received message REGISTER from shim
+2018-05-14 12:57:41.056 UTC [chaincode] handleMessage -> DEBU 0f9 []Fabric side Handling ChaincodeMessage of type: REGISTER in state created
+2018-05-14 12:57:41.056 UTC [chaincode] beforeRegisterEvent -> DEBU 0fa Received REGISTER in state created
+2018-05-14 12:57:41.056 UTC [chaincode] registerHandler -> DEBU 0fb registered handler complete for chaincode escc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.056 UTC [chaincode] beforeRegisterEvent -> DEBU 0fc Got REGISTER for chaincodeID = name:"escc:1.1.1-snapshot-849e304" , sending back REGISTERED
+2018-05-14 12:57:41.056 UTC [chaincode] notifyDuringStartup -> DEBU 0fd Notifying during startup
+2018-05-14 12:57:41.056 UTC [shim] func1 -> DEBU 0fe []Received message REGISTERED from shim
+2018-05-14 12:57:41.056 UTC [shim] handleMessage -> DEBU 0ff []Handling ChaincodeMessage of type: REGISTERED(state:created)
+2018-05-14 12:57:41.056 UTC [shim] beforeRegistered -> DEBU 100 Received REGISTERED, ready for invocations
+2018-05-14 12:57:41.056 UTC [chaincode] func1 -> DEBU 101 chaincode escc:1.1.1-snapshot-849e304 launch seq completed
+2018-05-14 12:57:41.056 UTC [chaincode] ready -> DEBU 102 sending READY
+2018-05-14 12:57:41.056 UTC [chaincode] setChaincodeProposal -> DEBU 103 Setting chaincode proposal context...
+2018-05-14 12:57:41.056 UTC [chaincode] processStream -> DEBU 104 [3f1ac4bd]Move state message READY
+2018-05-14 12:57:41.056 UTC [chaincode] handleMessage -> DEBU 105 [3f1ac4bd]Fabric side Handling ChaincodeMessage of type: READY in state established
+2018-05-14 12:57:41.056 UTC [chaincode] enterReadyState -> DEBU 106 [3f1ac4bd]Entered state ready
+2018-05-14 12:57:41.056 UTC [chaincode] notify -> DEBU 107 notifying Txid:3f1ac4bd-8fd5-4934-9cc6-e13afaea6979, channelID:
+2018-05-14 12:57:41.056 UTC [chaincode] processStream -> DEBU 108 [3f1ac4bd]sending state message READY
+2018-05-14 12:57:41.057 UTC [shim] func1 -> DEBU 109 [3f1ac4bd]Received message READY from shim
+2018-05-14 12:57:41.057 UTC [shim] handleMessage -> DEBU 10a [3f1ac4bd]Handling ChaincodeMessage of type: READY(state:established)
+2018-05-14 12:57:41.057 UTC [chaincode] Launch -> DEBU 10b sending init completed
+2018-05-14 12:57:41.057 UTC [chaincode] Launch -> DEBU 10c LaunchChaincode complete
+2018-05-14 12:57:41.057 UTC [chaincode] Execute -> DEBU 10d Entry
+2018-05-14 12:57:41.057 UTC [chaincode] Execute -> DEBU 10e chaincode canonical name: escc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.057 UTC [chaincode] sendExecuteMessage -> DEBU 10f [3f1ac4bd]Inside sendExecuteMessage. Message INIT
+2018-05-14 12:57:41.057 UTC [chaincode] setChaincodeProposal -> DEBU 110 Setting chaincode proposal context...
+2018-05-14 12:57:41.057 UTC [chaincode] sendExecuteMessage -> DEBU 111 [3f1ac4bd]sendExecuteMsg trigger event INIT
+2018-05-14 12:57:41.057 UTC [chaincode] processStream -> DEBU 112 [3f1ac4bd]Move state message INIT
+2018-05-14 12:57:41.057 UTC [chaincode] handleMessage -> DEBU 113 [3f1ac4bd]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+2018-05-14 12:57:41.057 UTC [chaincode] filterError -> DEBU 114 Ignoring NoTransitionError: no transition
+2018-05-14 12:57:41.057 UTC [chaincode] processStream -> DEBU 115 [3f1ac4bd]sending state message INIT
+2018-05-14 12:57:41.057 UTC [shim] func1 -> DEBU 116 [3f1ac4bd]Received message INIT from shim
+2018-05-14 12:57:41.057 UTC [shim] handleMessage -> DEBU 117 [3f1ac4bd]Handling ChaincodeMessage of type: INIT(state:ready)
+2018-05-14 12:57:41.057 UTC [shim] beforeInit -> DEBU 118 Entered state ready
+2018-05-14 12:57:41.057 UTC [shim] beforeInit -> DEBU 119 [3f1ac4bd]Received INIT, initializing chaincode
+2018-05-14 12:57:41.057 UTC [escc] Init -> INFO 11a Successfully initialized ESCC
+2018-05-14 12:57:41.057 UTC [shim] func1 -> DEBU 11b [3f1ac4bd]Init get response status: 200
+2018-05-14 12:57:41.057 UTC [shim] func1 -> DEBU 11c [3f1ac4bd]Init succeeded. Sending COMPLETED
+2018-05-14 12:57:41.057 UTC [shim] func1 -> DEBU 11d [3f1ac4bd]Move state message COMPLETED
+2018-05-14 12:57:41.057 UTC [shim] handleMessage -> DEBU 11e [3f1ac4bd]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-14 12:57:41.057 UTC [shim] func1 -> DEBU 11f [3f1ac4bd]send state message COMPLETED
+2018-05-14 12:57:41.057 UTC [chaincode] processStream -> DEBU 120 [3f1ac4bd]Received message COMPLETED from shim
+2018-05-14 12:57:41.057 UTC [chaincode] handleMessage -> DEBU 121 [3f1ac4bd]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-14 12:57:41.057 UTC [chaincode] handleMessage -> DEBU 122 [3f1ac4bd-8fd5-4934-9cc6-e13afaea6979]HandleMessage- COMPLETED. Notify
+2018-05-14 12:57:41.057 UTC [chaincode] notify -> DEBU 123 notifying Txid:3f1ac4bd-8fd5-4934-9cc6-e13afaea6979, channelID:
+2018-05-14 12:57:41.057 UTC [chaincode] Execute -> DEBU 124 Exit
+2018-05-14 12:57:41.057 UTC [sccapi] deploySysCC -> INFO 125 system chaincode escc/(github.com/hyperledger/fabric/core/scc/escc) deployed
+2018-05-14 12:57:41.057 UTC [ccprovider] NewCCContext -> DEBU 126 NewCCCC (chain=,chaincode=vscc,version=1.1.1-snapshot-849e304,txid=e7cf110c-316c-47f3-bf35-6337e827e0c2,syscc=true,proposal=0x0,canname=vscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.057 UTC [chaincode] launchAndWaitForRegister -> DEBU 127 chaincode vscc:1.1.1-snapshot-849e304 is being launched
+2018-05-14 12:57:41.057 UTC [chaincode] getLaunchConfigs -> DEBU 128 Executable is chaincode
+2018-05-14 12:57:41.057 UTC [chaincode] getLaunchConfigs -> DEBU 129 Args [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.057 UTC [chaincode] getLaunchConfigs -> DEBU 12a Envs [CORE_CHAINCODE_ID_NAME=vscc:1.1.1-snapshot-849e304 CORE_PEER_TLS_ENABLED=false CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-05-14 12:57:41.057 UTC [chaincode] getLaunchConfigs -> DEBU 12b FilesToUpload []
+2018-05-14 12:57:41.057 UTC [chaincode] launch -> DEBU 12c start container: vscc:1.1.1-snapshot-849e304(networkid:dev,peerid:peer0.org1.example.com)
+2018-05-14 12:57:41.057 UTC [chaincode] launch -> DEBU 12d start container with args: chaincode -peer.address=peer0.org1.example.com:7052
+2018-05-14 12:57:41.057 UTC [chaincode] launch -> DEBU 12e start container with env:
+	CORE_CHAINCODE_ID_NAME=vscc:1.1.1-snapshot-849e304
+	CORE_PEER_TLS_ENABLED=false
+	CORE_CHAINCODE_LOGGING_LEVEL=info
+	CORE_CHAINCODE_LOGGING_SHIM=warning
+	CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-05-14 12:57:41.057 UTC [container] lockContainer -> DEBU 12f waiting for container(vscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.057 UTC [container] lockContainer -> DEBU 130 got container (vscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.057 UTC [inproccontroller] getInstance -> DEBU 131 chaincode instance created for vscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.057 UTC [container] unlockContainer -> DEBU 132 container lock deleted(vscc-1.1.1-snapshot-849e304)
+2018-05-14 12:57:41.057 UTC [inproccontroller] func2 -> DEBU 133 chaincode-support started for  vscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.057 UTC [chaincode] HandleChaincodeStream -> DEBU 134 Current context deadline = 0001-01-01 00:00:00 +0000 UTC, ok = false
+2018-05-14 12:57:41.057 UTC [inproccontroller] func1 -> DEBU 135 chaincode started for vscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.058 UTC [shim] StartInProc -> DEBU 136 in proc [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.058 UTC [shim] StartInProc -> DEBU 137 starting chat with peer using name=vscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.058 UTC [shim] chatWithPeer -> DEBU 138 Registering.. sending REGISTER
+2018-05-14 12:57:41.058 UTC [chaincode] processStream -> DEBU 139 []Received message REGISTER from shim
+2018-05-14 12:57:41.058 UTC [chaincode] handleMessage -> DEBU 13a []Fabric side Handling ChaincodeMessage of type: REGISTER in state created
+2018-05-14 12:57:41.058 UTC [chaincode] beforeRegisterEvent -> DEBU 13b Received REGISTER in state created
+2018-05-14 12:57:41.058 UTC [chaincode] registerHandler -> DEBU 13c registered handler complete for chaincode vscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.058 UTC [chaincode] beforeRegisterEvent -> DEBU 13d Got REGISTER for chaincodeID = name:"vscc:1.1.1-snapshot-849e304" , sending back REGISTERED
+2018-05-14 12:57:41.058 UTC [chaincode] notifyDuringStartup -> DEBU 13e Notifying during startup
+2018-05-14 12:57:41.058 UTC [shim] func1 -> DEBU 13f []Received message REGISTERED from shim
+2018-05-14 12:57:41.058 UTC [chaincode] func1 -> DEBU 141 chaincode vscc:1.1.1-snapshot-849e304 launch seq completed
+2018-05-14 12:57:41.058 UTC [chaincode] ready -> DEBU 142 sending READY
+2018-05-14 12:57:41.058 UTC [chaincode] setChaincodeProposal -> DEBU 143 Setting chaincode proposal context...
+2018-05-14 12:57:41.058 UTC [chaincode] processStream -> DEBU 144 [e7cf110c]Move state message READY
+2018-05-14 12:57:41.058 UTC [chaincode] handleMessage -> DEBU 145 [e7cf110c]Fabric side Handling ChaincodeMessage of type: READY in state established
+2018-05-14 12:57:41.058 UTC [chaincode] enterReadyState -> DEBU 146 [e7cf110c]Entered state ready
+2018-05-14 12:57:41.058 UTC [chaincode] notify -> DEBU 147 notifying Txid:e7cf110c-316c-47f3-bf35-6337e827e0c2, channelID:
+2018-05-14 12:57:41.058 UTC [chaincode] processStream -> DEBU 148 [e7cf110c]sending state message READY
+2018-05-14 12:57:41.058 UTC [chaincode] Launch -> DEBU 149 sending init completed
+2018-05-14 12:57:41.058 UTC [chaincode] Launch -> DEBU 14a LaunchChaincode complete
+2018-05-14 12:57:41.058 UTC [chaincode] Execute -> DEBU 14b Entry
+2018-05-14 12:57:41.058 UTC [chaincode] Execute -> DEBU 14c chaincode canonical name: vscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.058 UTC [chaincode] sendExecuteMessage -> DEBU 14d [e7cf110c]Inside sendExecuteMessage. Message INIT
+2018-05-14 12:57:41.058 UTC [chaincode] setChaincodeProposal -> DEBU 14e Setting chaincode proposal context...
+2018-05-14 12:57:41.058 UTC [chaincode] sendExecuteMessage -> DEBU 14f [e7cf110c]sendExecuteMsg trigger event INIT
+2018-05-14 12:57:41.058 UTC [shim] handleMessage -> DEBU 140 []Handling ChaincodeMessage of type: REGISTERED(state:created)
+2018-05-14 12:57:41.058 UTC [shim] beforeRegistered -> DEBU 150 Received REGISTERED, ready for invocations
+2018-05-14 12:57:41.058 UTC [shim] func1 -> DEBU 151 [e7cf110c]Received message READY from shim
+2018-05-14 12:57:41.058 UTC [shim] handleMessage -> DEBU 152 [e7cf110c]Handling ChaincodeMessage of type: READY(state:established)
+2018-05-14 12:57:41.058 UTC [chaincode] processStream -> DEBU 153 [e7cf110c]Move state message INIT
+2018-05-14 12:57:41.058 UTC [chaincode] handleMessage -> DEBU 154 [e7cf110c]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+2018-05-14 12:57:41.058 UTC [chaincode] filterError -> DEBU 155 Ignoring NoTransitionError: no transition
+2018-05-14 12:57:41.058 UTC [chaincode] processStream -> DEBU 156 [e7cf110c]sending state message INIT
+2018-05-14 12:57:41.059 UTC [shim] func1 -> DEBU 157 [e7cf110c]Received message INIT from shim
+2018-05-14 12:57:41.059 UTC [shim] handleMessage -> DEBU 158 [e7cf110c]Handling ChaincodeMessage of type: INIT(state:ready)
+2018-05-14 12:57:41.059 UTC [shim] beforeInit -> DEBU 159 Entered state ready
+2018-05-14 12:57:41.059 UTC [shim] beforeInit -> DEBU 15a [e7cf110c]Received INIT, initializing chaincode
+2018-05-14 12:57:41.059 UTC [shim] func1 -> DEBU 15b [e7cf110c]Init get response status: 200
+2018-05-14 12:57:41.059 UTC [shim] func1 -> DEBU 15c [e7cf110c]Init succeeded. Sending COMPLETED
+2018-05-14 12:57:41.059 UTC [shim] func1 -> DEBU 15d [e7cf110c]Move state message COMPLETED
+2018-05-14 12:57:41.059 UTC [shim] handleMessage -> DEBU 15e [e7cf110c]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-14 12:57:41.059 UTC [shim] func1 -> DEBU 15f [e7cf110c]send state message COMPLETED
+2018-05-14 12:57:41.059 UTC [chaincode] processStream -> DEBU 160 [e7cf110c]Received message COMPLETED from shim
+2018-05-14 12:57:41.059 UTC [chaincode] handleMessage -> DEBU 161 [e7cf110c]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-14 12:57:41.059 UTC [chaincode] handleMessage -> DEBU 162 [e7cf110c-316c-47f3-bf35-6337e827e0c2]HandleMessage- COMPLETED. Notify
+2018-05-14 12:57:41.059 UTC [chaincode] notify -> DEBU 163 notifying Txid:e7cf110c-316c-47f3-bf35-6337e827e0c2, channelID:
+2018-05-14 12:57:41.059 UTC [chaincode] Execute -> DEBU 164 Exit
+2018-05-14 12:57:41.059 UTC [sccapi] deploySysCC -> INFO 165 system chaincode vscc/(github.com/hyperledger/fabric/core/scc/vscc) deployed
+2018-05-14 12:57:41.059 UTC [ccprovider] NewCCContext -> DEBU 166 NewCCCC (chain=,chaincode=qscc,version=1.1.1-snapshot-849e304,txid=d90391ca-e949-40cf-9933-f06648fbc896,syscc=true,proposal=0x0,canname=qscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.059 UTC [chaincode] launchAndWaitForRegister -> DEBU 167 chaincode qscc:1.1.1-snapshot-849e304 is being launched
+2018-05-14 12:57:41.059 UTC [chaincode] getLaunchConfigs -> DEBU 168 Executable is chaincode
+2018-05-14 12:57:41.059 UTC [chaincode] getLaunchConfigs -> DEBU 169 Args [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.059 UTC [chaincode] getLaunchConfigs -> DEBU 16a Envs [CORE_CHAINCODE_ID_NAME=qscc:1.1.1-snapshot-849e304 CORE_PEER_TLS_ENABLED=false CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-05-14 12:57:41.059 UTC [chaincode] getLaunchConfigs -> DEBU 16b FilesToUpload []
+2018-05-14 12:57:41.059 UTC [chaincode] launch -> DEBU 16c start container: qscc:1.1.1-snapshot-849e304(networkid:dev,peerid:peer0.org1.example.com)
+2018-05-14 12:57:41.059 UTC [chaincode] launch -> DEBU 16d start container with args: chaincode -peer.address=peer0.org1.example.com:7052
+2018-05-14 12:57:41.059 UTC [chaincode] launch -> DEBU 16e start container with env:
+	CORE_CHAINCODE_ID_NAME=qscc:1.1.1-snapshot-849e304
+	CORE_PEER_TLS_ENABLED=false
+	CORE_CHAINCODE_LOGGING_LEVEL=info
+	CORE_CHAINCODE_LOGGING_SHIM=warning
+	CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-05-14 12:57:41.059 UTC [container] lockContainer -> DEBU 16f waiting for container(qscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.060 UTC [container] lockContainer -> DEBU 170 got container (qscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.060 UTC [inproccontroller] getInstance -> DEBU 171 chaincode instance created for qscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.060 UTC [container] unlockContainer -> DEBU 172 container lock deleted(qscc-1.1.1-snapshot-849e304)
+2018-05-14 12:57:41.060 UTC [inproccontroller] func1 -> DEBU 174 chaincode started for qscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.060 UTC [shim] StartInProc -> DEBU 175 in proc [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.060 UTC [shim] StartInProc -> DEBU 176 starting chat with peer using name=qscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.060 UTC [shim] chatWithPeer -> DEBU 177 Registering.. sending REGISTER
+2018-05-14 12:57:41.060 UTC [inproccontroller] func2 -> DEBU 173 chaincode-support started for  qscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.060 UTC [chaincode] HandleChaincodeStream -> DEBU 178 Current context deadline = 0001-01-01 00:00:00 +0000 UTC, ok = false
+2018-05-14 12:57:41.060 UTC [chaincode] processStream -> DEBU 179 []Received message REGISTER from shim
+2018-05-14 12:57:41.060 UTC [chaincode] handleMessage -> DEBU 17a []Fabric side Handling ChaincodeMessage of type: REGISTER in state created
+2018-05-14 12:57:41.060 UTC [chaincode] beforeRegisterEvent -> DEBU 17b Received REGISTER in state created
+2018-05-14 12:57:41.060 UTC [chaincode] registerHandler -> DEBU 17c registered handler complete for chaincode qscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.060 UTC [chaincode] beforeRegisterEvent -> DEBU 17d Got REGISTER for chaincodeID = name:"qscc:1.1.1-snapshot-849e304" , sending back REGISTERED
+2018-05-14 12:57:41.060 UTC [shim] func1 -> DEBU 17e []Received message REGISTERED from shim
+2018-05-14 12:57:41.060 UTC [shim] handleMessage -> DEBU 17f []Handling ChaincodeMessage of type: REGISTERED(state:created)
+2018-05-14 12:57:41.061 UTC [shim] beforeRegistered -> DEBU 180 Received REGISTERED, ready for invocations
+2018-05-14 12:57:41.061 UTC [chaincode] notifyDuringStartup -> DEBU 181 Notifying during startup
+2018-05-14 12:57:41.061 UTC [chaincode] func1 -> DEBU 182 chaincode qscc:1.1.1-snapshot-849e304 launch seq completed
+2018-05-14 12:57:41.061 UTC [chaincode] ready -> DEBU 183 sending READY
+2018-05-14 12:57:41.061 UTC [chaincode] setChaincodeProposal -> DEBU 184 Setting chaincode proposal context...
+2018-05-14 12:57:41.061 UTC [chaincode] processStream -> DEBU 185 [d90391ca]Move state message READY
+2018-05-14 12:57:41.061 UTC [chaincode] handleMessage -> DEBU 186 [d90391ca]Fabric side Handling ChaincodeMessage of type: READY in state established
+2018-05-14 12:57:41.061 UTC [chaincode] enterReadyState -> DEBU 187 [d90391ca]Entered state ready
+2018-05-14 12:57:41.061 UTC [chaincode] notify -> DEBU 188 notifying Txid:d90391ca-e949-40cf-9933-f06648fbc896, channelID:
+2018-05-14 12:57:41.061 UTC [chaincode] processStream -> DEBU 189 [d90391ca]sending state message READY
+2018-05-14 12:57:41.061 UTC [shim] func1 -> DEBU 18a [d90391ca]Received message READY from shim
+2018-05-14 12:57:41.062 UTC [shim] handleMessage -> DEBU 18b [d90391ca]Handling ChaincodeMessage of type: READY(state:established)
+2018-05-14 12:57:41.062 UTC [chaincode] Launch -> DEBU 18c sending init completed
+2018-05-14 12:57:41.062 UTC [chaincode] Launch -> DEBU 18d LaunchChaincode complete
+2018-05-14 12:57:41.062 UTC [chaincode] Execute -> DEBU 18e Entry
+2018-05-14 12:57:41.062 UTC [chaincode] Execute -> DEBU 18f chaincode canonical name: qscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.062 UTC [chaincode] sendExecuteMessage -> DEBU 190 [d90391ca]Inside sendExecuteMessage. Message INIT
+2018-05-14 12:57:41.062 UTC [chaincode] setChaincodeProposal -> DEBU 191 Setting chaincode proposal context...
+2018-05-14 12:57:41.062 UTC [chaincode] sendExecuteMessage -> DEBU 192 [d90391ca]sendExecuteMsg trigger event INIT
+2018-05-14 12:57:41.062 UTC [chaincode] processStream -> DEBU 193 [d90391ca]Move state message INIT
+2018-05-14 12:57:41.062 UTC [chaincode] handleMessage -> DEBU 194 [d90391ca]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+2018-05-14 12:57:41.062 UTC [chaincode] filterError -> DEBU 195 Ignoring NoTransitionError: no transition
+2018-05-14 12:57:41.062 UTC [chaincode] processStream -> DEBU 196 [d90391ca]sending state message INIT
+2018-05-14 12:57:41.062 UTC [shim] func1 -> DEBU 197 [d90391ca]Received message INIT from shim
+2018-05-14 12:57:41.062 UTC [shim] handleMessage -> DEBU 198 [d90391ca]Handling ChaincodeMessage of type: INIT(state:ready)
+2018-05-14 12:57:41.062 UTC [shim] beforeInit -> DEBU 199 Entered state ready
+2018-05-14 12:57:41.062 UTC [shim] beforeInit -> DEBU 19a [d90391ca]Received INIT, initializing chaincode
+2018-05-14 12:57:41.062 UTC [qscc] Init -> INFO 19b Init QSCC
+2018-05-14 12:57:41.062 UTC [shim] func1 -> DEBU 19c [d90391ca]Init get response status: 200
+2018-05-14 12:57:41.062 UTC [shim] func1 -> DEBU 19d [d90391ca]Init succeeded. Sending COMPLETED
+2018-05-14 12:57:41.062 UTC [shim] func1 -> DEBU 19e [d90391ca]Move state message COMPLETED
+2018-05-14 12:57:41.062 UTC [shim] handleMessage -> DEBU 19f [d90391ca]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-14 12:57:41.062 UTC [shim] func1 -> DEBU 1a0 [d90391ca]send state message COMPLETED
+2018-05-14 12:57:41.062 UTC [chaincode] processStream -> DEBU 1a1 [d90391ca]Received message COMPLETED from shim
+2018-05-14 12:57:41.062 UTC [chaincode] handleMessage -> DEBU 1a2 [d90391ca]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-14 12:57:41.062 UTC [chaincode] handleMessage -> DEBU 1a3 [d90391ca-e949-40cf-9933-f06648fbc896]HandleMessage- COMPLETED. Notify
+2018-05-14 12:57:41.062 UTC [chaincode] notify -> DEBU 1a4 notifying Txid:d90391ca-e949-40cf-9933-f06648fbc896, channelID:
+2018-05-14 12:57:41.062 UTC [chaincode] Execute -> DEBU 1a5 Exit
+2018-05-14 12:57:41.062 UTC [sccapi] deploySysCC -> INFO 1a6 system chaincode qscc/(github.com/hyperledger/fabric/core/chaincode/qscc) deployed
+2018-05-14 12:57:41.063 UTC [ccprovider] NewCCContext -> DEBU 1a7 NewCCCC (chain=,chaincode=samplesyscc,version=1.1.1-snapshot-849e304,txid=d104c28a-8a58-418a-9542-bbbee1af6f88,syscc=true,proposal=0x0,canname=samplesyscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.063 UTC [chaincode] launchAndWaitForRegister -> DEBU 1a8 chaincode samplesyscc:1.1.1-snapshot-849e304 is being launched
+2018-05-14 12:57:41.063 UTC [chaincode] getLaunchConfigs -> DEBU 1a9 Executable is chaincode
+2018-05-14 12:57:41.063 UTC [chaincode] getLaunchConfigs -> DEBU 1aa Args [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.063 UTC [chaincode] getLaunchConfigs -> DEBU 1ab Envs [CORE_CHAINCODE_ID_NAME=samplesyscc:1.1.1-snapshot-849e304 CORE_PEER_TLS_ENABLED=false CORE_CHAINCODE_LOGGING_LEVEL=info CORE_CHAINCODE_LOGGING_SHIM=warning CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}]
+2018-05-14 12:57:41.063 UTC [chaincode] getLaunchConfigs -> DEBU 1ac FilesToUpload []
+2018-05-14 12:57:41.063 UTC [chaincode] launch -> DEBU 1ad start container: samplesyscc:1.1.1-snapshot-849e304(networkid:dev,peerid:peer0.org1.example.com)
+2018-05-14 12:57:41.063 UTC [chaincode] launch -> DEBU 1ae start container with args: chaincode -peer.address=peer0.org1.example.com:7052
+2018-05-14 12:57:41.063 UTC [chaincode] launch -> DEBU 1af start container with env:
+	CORE_CHAINCODE_ID_NAME=samplesyscc:1.1.1-snapshot-849e304
+	CORE_PEER_TLS_ENABLED=false
+	CORE_CHAINCODE_LOGGING_LEVEL=info
+	CORE_CHAINCODE_LOGGING_SHIM=warning
+	CORE_CHAINCODE_LOGGING_FORMAT=%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}
+2018-05-14 12:57:41.063 UTC [container] lockContainer -> DEBU 1b0 waiting for container(samplesyscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.063 UTC [container] lockContainer -> DEBU 1b1 got container (samplesyscc-1.1.1-snapshot-849e304) lock
+2018-05-14 12:57:41.063 UTC [inproccontroller] getInstance -> DEBU 1b2 chaincode instance created for samplesyscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.063 UTC [container] unlockContainer -> DEBU 1b3 container lock deleted(samplesyscc-1.1.1-snapshot-849e304)
+2018-05-14 12:57:41.063 UTC [inproccontroller] func2 -> DEBU 1b4 chaincode-support started for  samplesyscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.063 UTC [chaincode] HandleChaincodeStream -> DEBU 1b5 Current context deadline = 0001-01-01 00:00:00 +0000 UTC, ok = false
+2018-05-14 12:57:41.063 UTC [inproccontroller] func1 -> DEBU 1b6 chaincode started for samplesyscc-1.1.1-snapshot-849e304
+2018-05-14 12:57:41.063 UTC [shim] StartInProc -> DEBU 1b7 in proc [chaincode -peer.address=peer0.org1.example.com:7052]
+2018-05-14 12:57:41.063 UTC [shim] StartInProc -> DEBU 1b8 starting chat with peer using name=samplesyscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.063 UTC [shim] chatWithPeer -> DEBU 1b9 Registering.. sending REGISTER
+2018-05-14 12:57:41.063 UTC [chaincode] processStream -> DEBU 1ba []Received message REGISTER from shim
+2018-05-14 12:57:41.063 UTC [chaincode] handleMessage -> DEBU 1bb []Fabric side Handling ChaincodeMessage of type: REGISTER in state created
+2018-05-14 12:57:41.063 UTC [chaincode] beforeRegisterEvent -> DEBU 1bc Received REGISTER in state created
+2018-05-14 12:57:41.063 UTC [chaincode] registerHandler -> DEBU 1bd registered handler complete for chaincode samplesyscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.063 UTC [chaincode] beforeRegisterEvent -> DEBU 1be Got REGISTER for chaincodeID = name:"samplesyscc:1.1.1-snapshot-849e304" , sending back REGISTERED
+2018-05-14 12:57:41.063 UTC [chaincode] notifyDuringStartup -> DEBU 1bf Notifying during startup
+2018-05-14 12:57:41.063 UTC [shim] func1 -> DEBU 1c0 []Received message REGISTERED from shim
+2018-05-14 12:57:41.063 UTC [shim] handleMessage -> DEBU 1c1 []Handling ChaincodeMessage of type: REGISTERED(state:created)
+2018-05-14 12:57:41.063 UTC [shim] beforeRegistered -> DEBU 1c2 Received REGISTERED, ready for invocations
+2018-05-14 12:57:41.063 UTC [chaincode] func1 -> DEBU 1c3 chaincode samplesyscc:1.1.1-snapshot-849e304 launch seq completed
+2018-05-14 12:57:41.063 UTC [chaincode] ready -> DEBU 1c4 sending READY
+2018-05-14 12:57:41.063 UTC [chaincode] setChaincodeProposal -> DEBU 1c5 Setting chaincode proposal context...
+2018-05-14 12:57:41.063 UTC [chaincode] processStream -> DEBU 1c6 [d104c28a]Move state message READY
+2018-05-14 12:57:41.063 UTC [chaincode] handleMessage -> DEBU 1c7 [d104c28a]Fabric side Handling ChaincodeMessage of type: READY in state established
+2018-05-14 12:57:41.063 UTC [chaincode] enterReadyState -> DEBU 1c8 [d104c28a]Entered state ready
+2018-05-14 12:57:41.063 UTC [chaincode] notify -> DEBU 1c9 notifying Txid:d104c28a-8a58-418a-9542-bbbee1af6f88, channelID:
+2018-05-14 12:57:41.064 UTC [chaincode] processStream -> DEBU 1ca [d104c28a]sending state message READY
+2018-05-14 12:57:41.064 UTC [shim] func1 -> DEBU 1cb [d104c28a]Received message READY from shim
+2018-05-14 12:57:41.064 UTC [shim] handleMessage -> DEBU 1cc [d104c28a]Handling ChaincodeMessage of type: READY(state:established)
+2018-05-14 12:57:41.064 UTC [chaincode] Launch -> DEBU 1cd sending init completed
+2018-05-14 12:57:41.064 UTC [chaincode] Launch -> DEBU 1ce LaunchChaincode complete
+2018-05-14 12:57:41.064 UTC [chaincode] Execute -> DEBU 1cf Entry
+2018-05-14 12:57:41.064 UTC [chaincode] Execute -> DEBU 1d0 chaincode canonical name: samplesyscc:1.1.1-snapshot-849e304
+2018-05-14 12:57:41.064 UTC [chaincode] sendExecuteMessage -> DEBU 1d1 [d104c28a]Inside sendExecuteMessage. Message INIT
+2018-05-14 12:57:41.064 UTC [chaincode] setChaincodeProposal -> DEBU 1d2 Setting chaincode proposal context...
+2018-05-14 12:57:41.064 UTC [chaincode] sendExecuteMessage -> DEBU 1d3 [d104c28a]sendExecuteMsg trigger event INIT
+2018-05-14 12:57:41.064 UTC [chaincode] processStream -> DEBU 1d4 [d104c28a]Move state message INIT
+2018-05-14 12:57:41.064 UTC [chaincode] handleMessage -> DEBU 1d5 [d104c28a]Fabric side Handling ChaincodeMessage of type: INIT in state ready
+2018-05-14 12:57:41.064 UTC [chaincode] filterError -> DEBU 1d6 Ignoring NoTransitionError: no transition
+2018-05-14 12:57:41.064 UTC [chaincode] processStream -> DEBU 1d7 [d104c28a]sending state message INIT
+2018-05-14 12:57:41.064 UTC [shim] func1 -> DEBU 1d8 [d104c28a]Received message INIT from shim
+2018-05-14 12:57:41.064 UTC [shim] handleMessage -> DEBU 1d9 [d104c28a]Handling ChaincodeMessage of type: INIT(state:ready)
+2018-05-14 12:57:41.064 UTC [shim] beforeInit -> DEBU 1da Entered state ready
+2018-05-14 12:57:41.064 UTC [shim] beforeInit -> DEBU 1db [d104c28a]Received INIT, initializing chaincode
+2018-05-14 12:57:41.064 UTC [samplesyscc] Init -> INFO 1dc Init SampleSysCC
+2018-05-14 12:57:41.064 UTC [shim] func1 -> DEBU 1dd [d104c28a]Init get response status: 200
+2018-05-14 12:57:41.064 UTC [shim] func1 -> DEBU 1de [d104c28a]Init succeeded. Sending COMPLETED
+2018-05-14 12:57:41.064 UTC [shim] func1 -> DEBU 1df [d104c28a]Move state message COMPLETED
+2018-05-14 12:57:41.064 UTC [shim] handleMessage -> DEBU 1e0 [d104c28a]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-14 12:57:41.064 UTC [shim] func1 -> DEBU 1e1 [d104c28a]send state message COMPLETED
+2018-05-14 12:57:41.064 UTC [chaincode] processStream -> DEBU 1e2 [d104c28a]Received message COMPLETED from shim
+2018-05-14 12:57:41.064 UTC [chaincode] handleMessage -> DEBU 1e3 [d104c28a]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-14 12:57:41.064 UTC [chaincode] handleMessage -> DEBU 1e4 [d104c28a-8a58-418a-9542-bbbee1af6f88]HandleMessage- COMPLETED. Notify
+2018-05-14 12:57:41.064 UTC [chaincode] notify -> DEBU 1e5 notifying Txid:d104c28a-8a58-418a-9542-bbbee1af6f88, channelID:
+2018-05-14 12:57:41.064 UTC [chaincode] Execute -> DEBU 1e6 Exit
+2018-05-14 12:57:41.064 UTC [sccapi] deploySysCC -> INFO 1e7 system chaincode samplesyscc/(github.com/inklabsfoundation/inkchain/core/scc/samplesyscc) deployed
+2018-05-14 12:57:41.064 UTC [nodeCmd] initSysCCs -> INFO 1e8 Deployed system chaincodes
+2018-05-14 12:57:41.064 UTC [nodeCmd] serve -> INFO 1e9 Starting peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[peer0.org1.example.com:7051]
+2018-05-14 12:57:41.065 UTC [nodeCmd] serve -> INFO 1ea Started peer with ID=[name:"peer0.org1.example.com" ], network ID=[dev], address=[peer0.org1.example.com:7051]
+2018-05-14 12:57:41.065 UTC [nodeCmd] func7 -> INFO 1eb Starting profiling server with listenAddress = 0.0.0.0:6060
+2018-05-14 12:57:41.065 UTC [flogging] setModuleLevel -> DEBU 1ec Module 'msp/identity' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.065 UTC [flogging] setModuleLevel -> DEBU 1ed Module 'msp' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1ee Module 'gossip/pull' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1ef Module 'gossip/election' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f0 Module 'gossip/gossip' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f1 Module 'gossip/privdata' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f2 Module 'gossip/state' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f3 Module 'gossip/service' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f4 Module 'gossip/discovery' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f5 Module 'gossip/comm' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f6 Module 'ledgermgmt' logger enabled for log level 'INFO'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f7 Module 'cauthdsl' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f8 Module 'policies' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1f9 Module 'grpc' logger enabled for log level 'ERROR'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1fa Module 'peer/gossip/mcs' logger enabled for log level 'WARNING'
+2018-05-14 12:57:41.066 UTC [flogging] setModuleLevel -> DEBU 1fb Module 'peer/gossip/sa' logger enabled for log level 'WARNING'
+
+
+
+

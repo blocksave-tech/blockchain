@@ -1,0 +1,77 @@
+
+2018-05-04 09:24:54.646 UTC [orderer/common/server] Broadcast -> DEBU 970 Starting new Broadcast handler
+2018-05-04 09:24:54.646 UTC [orderer/common/broadcast] Handle -> DEBU 971 Starting new broadcast loop for 172.19.0.9:34200
+2018-05-04 09:24:54.652 UTC [orderer/common/broadcast] Handle -> DEBU 972 [channel: mychannel] Broadcast is processing normal message from 172.19.0.9:34200 with txid '7b0ac089ebb46cce20af2d7e8e30600b5341e250b434f6e6a0bf159de515fa0c' of type ENDORSER_TRANSACTION
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 973 == Evaluating *policies.implicitMetaPolicy Policy /Channel/Writers ==
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 974 This is an implicit meta policy, it will trigger other policy evaluations, whose failures may be benign
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 975 == Evaluating *policies.implicitMetaPolicy Policy /Channel/Application/Writers ==
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 976 This is an implicit meta policy, it will trigger other policy evaluations, whose failures may be benign
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 977 == Evaluating *cauthdsl.policy Policy /Channel/Application/Org2MSP/Writers ==
+2018-05-04 09:24:54.652 UTC [cauthdsl] func1 -> DEBU 978 0xc420ab6038 gate 1525425894652706002 evaluation starts
+2018-05-04 09:24:54.652 UTC [cauthdsl] func2 -> DEBU 979 0xc420ab6038 signed by 0 principal evaluation starts (used [false])
+2018-05-04 09:24:54.652 UTC [cauthdsl] func2 -> DEBU 97a 0xc420ab6038 processing identity 0 with bytes of 0a074f7267314d535012ae062d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d4949434b7a4343416447674177494241674952414f3832652f35656547782f766e4469484b71354f6d3477436759494b6f5a497a6a304541774977637a454c0a4d416b474131554542684d4356564d78457a415242674e5642416754436b4e6862476c6d62334a7561574578466a415542674e564241635444564e68626942470a636d467559326c7a593238784754415842674e5642416f54454739795a7a45755a586868625842735a53356a623230784844416142674e5642414d5445324e680a4c6d39795a7a45755a586868625842735a53356a623230774868634e4d5467774e5441304d446b784e6a41345768634e4d6a67774e5441784d446b784e6a41340a576a42734d517377435159445651514745774a56557a45544d4245474131554543424d4b5132467361575a76636d3570595445574d4251474131554542784d4e0a5532467549455a795957356a61584e6a627a45504d4130474131554543784d47593278705a5735304d523877485159445651514444425a425a473170626b42760a636d63784c6d56345957317762475575593239744d466b77457759484b6f5a497a6a3043415159494b6f5a497a6a3044415163445167414549306e734c4b624a0a71322b706a712f2f412b345849503578306f65636e7a7755314e33353151356c4e692f3859652f73795772564b4c46416d5165675765356378414271654773490a512b74455a646f717331773157714e4e4d45737744675944565230504151482f42415144416765414d41774741315564457745422f7751434d4141774b7759440a5652306a42435177496f4167345838796b6175616c454332347a6d4f326335343574756c6a65366d3679584c4a6f6c3057416c43564a4d77436759494b6f5a490a7a6a304541774944534141775251496841496d62713055765445434f5862667161366331324d445056737a677466594c76524839524e397534706f4e416942550a6f6c2b71595a356f46546b57682b4754713258686d706145762b4971424838373877745233445a6350413d3d0a2d2d2d2d2d454e442043455254494649434154452d2d2d2d2d0a
+2018-05-04 09:24:54.652 UTC [cauthdsl] func2 -> DEBU 97b 0xc420ab6038 identity 0 does not satisfy principal: the identity is a member of a different MSP (expected Org2MSP, got Org1MSP)
+2018-05-04 09:24:54.652 UTC [cauthdsl] func2 -> DEBU 97c 0xc420ab6038 principal evaluation fails
+2018-05-04 09:24:54.652 UTC [cauthdsl] func1 -> DEBU 97d 0xc420ab6038 gate 1525425894652706002 evaluation fails
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 97e Signature set did not satisfy policy /Channel/Application/Org2MSP/Writers
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 97f == Done Evaluating *cauthdsl.policy Policy /Channel/Application/Org2MSP/Writers
+2018-05-04 09:24:54.652 UTC [policies] Evaluate -> DEBU 980 == Evaluating *cauthdsl.policy Policy /Channel/Application/Org1MSP/Writers ==
+2018-05-04 09:24:54.652 UTC [cauthdsl] func1 -> DEBU 981 0xc420ab6050 gate 1525425894652930826 evaluation starts
+2018-05-04 09:24:54.652 UTC [cauthdsl] func2 -> DEBU 982 0xc420ab6050 signed by 0 principal evaluation starts (used [false])
+2018-05-04 09:24:54.652 UTC [cauthdsl] func2 -> DEBU 983 0xc420ab6050 processing identity 0 with bytes of 0a074f7267314d535012ae062d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d4949434b7a4343416447674177494241674952414f3832652f35656547782f766e4469484b71354f6d3477436759494b6f5a497a6a304541774977637a454c0a4d416b474131554542684d4356564d78457a415242674e5642416754436b4e6862476c6d62334a7561574578466a415542674e564241635444564e68626942470a636d467559326c7a593238784754415842674e5642416f54454739795a7a45755a586868625842735a53356a623230784844416142674e5642414d5445324e680a4c6d39795a7a45755a586868625842735a53356a623230774868634e4d5467774e5441304d446b784e6a41345768634e4d6a67774e5441784d446b784e6a41340a576a42734d517377435159445651514745774a56557a45544d4245474131554543424d4b5132467361575a76636d3570595445574d4251474131554542784d4e0a5532467549455a795957356a61584e6a627a45504d4130474131554543784d47593278705a5735304d523877485159445651514444425a425a473170626b42760a636d63784c6d56345957317762475575593239744d466b77457759484b6f5a497a6a3043415159494b6f5a497a6a3044415163445167414549306e734c4b624a0a71322b706a712f2f412b345849503578306f65636e7a7755314e33353151356c4e692f3859652f73795772564b4c46416d5165675765356378414271654773490a512b74455a646f717331773157714e4e4d45737744675944565230504151482f42415144416765414d41774741315564457745422f7751434d4141774b7759440a5652306a42435177496f4167345838796b6175616c454332347a6d4f326335343574756c6a65366d3679584c4a6f6c3057416c43564a4d77436759494b6f5a490a7a6a304541774944534141775251496841496d62713055765445434f5862667161366331324d445056737a677466594c76524839524e397534706f4e416942550a6f6c2b71595a356f46546b57682b4754713258686d706145762b4971424838373877745233445a6350413d3d0a2d2d2d2d2d454e442043455254494649434154452d2d2d2d2d0a
+2018-05-04 09:24:54.652 UTC [msp] SatisfiesPrincipal -> DEBU 984 Checking if identity satisfies MEMBER role for Org1MSP
+2018-05-04 09:24:54.652 UTC [msp] Validate -> DEBU 985 MSP Org1MSP validating identity
+2018-05-04 09:24:54.653 UTC [msp] getCertificationChain -> DEBU 986 MSP Org1MSP getting certification chain
+2018-05-04 09:24:54.653 UTC [cauthdsl] func2 -> DEBU 987 0xc420ab6050 principal matched by identity 0
+2018-05-04 09:24:54.653 UTC [msp/identity] Verify -> DEBU 988 Verify: digest = 00000000  84 8e 81 84 6c ef 5f 72  07 37 ed 37 a7 57 b9 49  |....l._r.7.7.W.I|
+00000010  b7 69 c7 c3 62 c8 b0 e2  72 29 58 ef cc 04 23 05  |.i..b...r)X...#.|
+2018-05-04 09:24:54.653 UTC [msp/identity] Verify -> DEBU 989 Verify: sig = 00000000  30 44 02 20 06 72 e9 2f  96 8a d1 c1 eb 3f 48 36  |0D. .r./.....?H6|
+00000010  5b 34 1b 59 be dd df 61  52 c5 90 93 e8 41 eb a3  |[4.Y...aR....A..|
+00000020  e4 14 ce 0a 02 20 40 00  1c 07 55 98 c5 13 5d ed  |..... @...U...].|
+00000030  2e ed 01 3f 63 c7 eb 56  3e df 7d a5 6c bd 7a d6  |...?c..V>.}.l.z.|
+00000040  86 b9 3d 00 68 e7                                 |..=.h.|
+2018-05-04 09:24:54.653 UTC [cauthdsl] func2 -> DEBU 98a 0xc420ab6050 principal evaluation succeeds for identity 0
+2018-05-04 09:24:54.653 UTC [cauthdsl] func1 -> DEBU 98b 0xc420ab6050 gate 1525425894652930826 evaluation succeeds
+2018-05-04 09:24:54.653 UTC [policies] Evaluate -> DEBU 98c Signature set satisfies policy /Channel/Application/Org1MSP/Writers
+2018-05-04 09:24:54.653 UTC [policies] Evaluate -> DEBU 98d == Done Evaluating *cauthdsl.policy Policy /Channel/Application/Org1MSP/Writers
+2018-05-04 09:24:54.653 UTC [policies] Evaluate -> DEBU 98e Signature set satisfies policy /Channel/Application/Writers
+2018-05-04 09:24:54.653 UTC [policies] Evaluate -> DEBU 98f == Done Evaluating *policies.implicitMetaPolicy Policy /Channel/Application/Writers
+2018-05-04 09:24:54.653 UTC [policies] Evaluate -> DEBU 990 Signature set satisfies policy /Channel/Writers
+2018-05-04 09:24:54.653 UTC [policies] Evaluate -> DEBU 991 == Done Evaluating *policies.implicitMetaPolicy Policy /Channel/Writers
+2018-05-04 09:24:54.653 UTC [orderer/common/broadcast] Handle -> DEBU 992 [channel: mychannel] Broadcast has successfully enqueued message of type ENDORSER_TRANSACTION from 172.19.0.9:34200
+2018-05-04 09:24:54.653 UTC [orderer/common/blockcutter] Ordered -> DEBU 993 Enqueuing message into batch
+2018-05-04 09:24:54.653 UTC [orderer/common/blockcutter] Ordered -> DEBU 994 Batch size met, cutting batch
+2018-05-04 09:24:54.654 UTC [msp] GetLocalMSP -> DEBU 995 Returning existing local MSP
+2018-05-04 09:24:54.654 UTC [msp] GetDefaultSigningIdentity -> DEBU 996 Obtaining default signing identity
+2018-05-04 09:24:54.654 UTC [msp] GetLocalMSP -> DEBU 997 Returning existing local MSP
+2018-05-04 09:24:54.654 UTC [msp] GetDefaultSigningIdentity -> DEBU 998 Obtaining default signing identity
+2018-05-04 09:24:54.654 UTC [msp/identity] Sign -> DEBU 999 Sign: plaintext: 0A90060A0A4F7264657265724D535012...D61875B0148C784290272350D4545078 
+2018-05-04 09:24:54.654 UTC [msp/identity] Sign -> DEBU 99a Sign: digest: 8CF5D320696FBFE797829861BEFB7E76A3199C26BC35DBA8F843B827C4BD6A05 
+2018-05-04 09:24:54.654 UTC [msp] GetLocalMSP -> DEBU 99b Returning existing local MSP
+2018-05-04 09:24:54.654 UTC [msp] GetDefaultSigningIdentity -> DEBU 99c Obtaining default signing identity
+2018-05-04 09:24:54.654 UTC [orderer/commmon/multichannel] addLastConfigSignature -> DEBU 99d [channel: mychannel] About to write block, setting its LAST_CONFIG to 2
+2018-05-04 09:24:54.654 UTC [msp] GetLocalMSP -> DEBU 99e Returning existing local MSP
+2018-05-04 09:24:54.654 UTC [msp] GetDefaultSigningIdentity -> DEBU 99f Obtaining default signing identity
+2018-05-04 09:24:54.654 UTC [msp/identity] Sign -> DEBU 9a0 Sign: plaintext: 08020A90060A0A4F7264657265724D53...D61875B0148C784290272350D4545078 
+2018-05-04 09:24:54.654 UTC [msp/identity] Sign -> DEBU 9a1 Sign: digest: 5194C2F221BEAA74EF7ABBE06F9E7F15801788CED5FF1721FDFE28871A1014B8 
+2018-05-04 09:24:54.655 UTC [orderer/common/broadcast] Handle -> DEBU 9a2 Received EOF from 172.19.0.9:34200, hangup
+2018-05-04 09:24:54.655 UTC [orderer/common/server] func1 -> DEBU 9a3 Closing Broadcast stream
+2018-05-04 09:24:54.655 UTC [grpc] Printf -> DEBU 9a4 transport: http2Server.HandleStreams failed to read frame: read tcp 172.19.0.3:7050->172.19.0.9:34200: read: connection reset by peer
+2018-05-04 09:24:54.656 UTC [fsblkstorage] indexBlock -> DEBU 9a5 Indexing block [blockNum=6, blockHash=[]byte{0x72, 0x68, 0x87, 0xe9, 0x27, 0xc0, 0x30, 0x26, 0x1c, 0x40, 0x7d, 0xde, 0x13, 0x4d, 0xba, 0x1, 0xd8, 0x20, 0x98, 0x1, 0xed, 0x3f, 0xc0, 0x5f, 0xcd, 0x77, 0x1, 0x49, 0x2d, 0x11, 0x30, 0x2e} txOffsets=
+txId=7b0ac089ebb46cce20af2d7e8e30600b5341e250b434f6e6a0bf159de515fa0c locPointer=offset=70, bytesLength=3006
+]
+2018-05-04 09:24:54.658 UTC [fsblkstorage] updateCheckpoint -> DEBU 9a6 Broadcasting about update checkpointInfo: latestFileChunkSuffixNum=[0], latestFileChunksize=[70722], isChainEmpty=[false], lastBlockNumber=[6]
+2018-05-04 09:24:54.658 UTC [orderer/commmon/multichannel] commitBlock -> DEBU 9a7 [channel: mychannel] Wrote block 6
+2018-05-04 09:24:54.658 UTC [fsblkstorage] waitForBlock -> DEBU 9a8 Came out of wait. maxAvailaBlockNumber=[6]
+2018-05-04 09:24:54.658 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 9a9 Remaining bytes=[4870], Going to peek [8] bytes
+2018-05-04 09:24:54.658 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 9aa Returning blockbytes - length=[4868], placementInfo={fileNum=[0], startOffset=[65852], bytesOffset=[65854]}
+2018-05-04 09:24:54.658 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 9ac blockbytes [4868] read from file [0]
+2018-05-04 09:24:54.658 UTC [fsblkstorage] waitForBlock -> DEBU 9ab Came out of wait. maxAvailaBlockNumber=[6]
+2018-05-04 09:24:54.658 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 9ad Remaining bytes=[4870], Going to peek [8] bytes
+2018-05-04 09:24:54.658 UTC [common/deliver] deliverBlocks -> DEBU 9af [channel: mychannel] Delivering block for (0xc4203e2480) for 172.19.0.6:41778
+2018-05-04 09:24:54.658 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 9ae Returning blockbytes - length=[4868], placementInfo={fileNum=[0], startOffset=[65852], bytesOffset=[65854]}
+2018-05-04 09:24:54.658 UTC [fsblkstorage] nextBlockBytesAndPlacementInfo -> DEBU 9b0 blockbytes [4868] read from file [0]
+2018-05-04 09:24:54.658 UTC [common/deliver] deliverBlocks -> DEBU 9b1 [channel: mychannel] Delivering block for (0xc42034ede0) for 172.19.0.2:36728
+2018-05-04 09:24:54.659 UTC [fsblkstorage] waitForBlock -> DEBU 9b2 Going to wait for newer blocks. maxAvailaBlockNumber=[6], waitForBlockNum=[7]
+2018-05-04 09:24:54.659 UTC [fsblkstorage] waitForBlock -> DEBU 9b3 Going to wait for newer blocks. maxAvailaBlockNumber=[6], waitForBlockNum=[7]
+

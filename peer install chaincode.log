@@ -1,0 +1,76 @@
+用户ｉｎｓｔａｌｌ用户链码　执行：ProcessProposal　－－－　simulateProposal
+
+2018-05-15 06:50:29.860 UTC [endorser] ProcessProposal -> DEBU 5ae Entering: Got request from 172.19.0.9:59038
+2018-05-15 06:50:29.860 UTC [protoutils] ValidateProposalMessage -> DEBU 5af ValidateProposalMessage starts for signed proposal 0xc4219a4bd0
+2018-05-15 06:50:29.860 UTC [protoutils] validateChannelHeader -> DEBU 5b0 validateChannelHeader info: header type 3
+2018-05-15 06:50:29.860 UTC [protoutils] checkSignatureFromCreator -> DEBU 5b1 begin
+2018-05-15 06:50:29.860 UTC [protoutils] checkSignatureFromCreator -> DEBU 5b2 creator is &{Org1MSP 8028fd415ffd9cfb807fd65f7a5fcebb962546ab1bbe143408ea0087f877b8f4}
+2018-05-15 06:50:29.860 UTC [protoutils] checkSignatureFromCreator -> DEBU 5b3 creator is valid
+2018-05-15 06:50:29.860 UTC [protoutils] checkSignatureFromCreator -> DEBU 5b4 exits successfully
+2018-05-15 06:50:29.860 UTC [protoutils] validateChaincodeProposalMessage -> DEBU 5b5 validateChaincodeProposalMessage starts for proposal 0xc421cdb220, header 0xc4219a4f60
+2018-05-15 06:50:29.860 UTC [protoutils] validateChaincodeProposalMessage -> DEBU 5b6 validateChaincodeProposalMessage info: header extension references chaincode name:"lscc" 
+2018-05-15 06:50:29.860 UTC [endorser] preProcess -> DEBU 5b7 [][52e5fe18] processing txid: 52e5fe185a795d97a8141d62b0010d84ea66620badd0e4c4e295de9270501f38
+
+
+2018-05-15 06:50:29.860 UTC [endorser] simulateProposal -> DEBU 5b8 [][52e5fe18] Entry chaincode: name:"lscc" 
+
+2018-05-15 06:50:29.860 UTC [endorser] disableJavaCCInst -> DEBU 5b9 java chaincode enabled
+2018-05-15 06:50:29.860 UTC [endorser] callChaincode -> DEBU 5ba [][52e5fe18] Entry chaincode: name:"lscc"  version: 1.1.1-snapshot-849e304
+2018-05-15 06:50:29.860 UTC [ccprovider] NewCCContext -> DEBU 5bb NewCCCC (chain=,chaincode=lscc,version=1.1.1-snapshot-849e304,txid=52e5fe185a795d97a8141d62b0010d84ea66620badd0e4c4e295de9270501f38,syscc=true,proposal=0xc421cdb220,canname=lscc:1.1.1-snapshot-849e304
+2018-05-15 06:50:29.860 UTC [chaincode] Launch -> DEBU 5bc chaincode is running(no need to launch) : lscc:1.1.1-snapshot-849e304
+
+2018-05-15 06:50:29.860 UTC [chaincode] Execute -> DEBU 5bd Entry
+2018-05-15 06:50:29.860 UTC [chaincode] Execute -> DEBU 5be chaincode canonical name: lscc:1.1.1-snapshot-849e304
+
+2018-05-15 06:50:29.860 UTC [chaincode] sendExecuteMessage -> DEBU 5bf [52e5fe18]Inside sendExecuteMessage. Message TRANSACTION
+
+2018-05-15 06:50:29.860 UTC [chaincode] setChaincodeProposal -> DEBU 5c0 Setting chaincode proposal context...
+2018-05-15 06:50:29.860 UTC [chaincode] setChaincodeProposal -> DEBU 5c1 Proposal different from nil. Creating chaincode proposal context...
+2018-05-15 06:50:29.860 UTC [chaincode] sendExecuteMessage -> DEBU 5c2 [52e5fe18]sendExecuteMsg trigger event TRANSACTION
+
+2018-05-15 06:50:29.860 UTC [chaincode] processStream -> DEBU 5c3 [52e5fe18]Move state message TRANSACTION
+2018-05-15 06:50:29.860 UTC [chaincode] handleMessage -> DEBU 5c4 [52e5fe18]Fabric side Handling ChaincodeMessage of type: TRANSACTION in state ready
+2018-05-15 06:50:29.860 UTC [chaincode] filterError -> DEBU 5c5 Ignoring NoTransitionError: no transition
+2018-05-15 06:50:29.861 UTC [chaincode] processStream -> DEBU 5c6 [52e5fe18]sending state message TRANSACTION
+2018-05-15 06:50:29.861 UTC [shim] func1 -> DEBU 5c7 [52e5fe18]Received message TRANSACTION from shim
+2018-05-15 06:50:29.861 UTC [shim] handleMessage -> DEBU 5c8 [52e5fe18]Handling ChaincodeMessage of type: TRANSACTION(state:ready)
+2018-05-15 06:50:29.861 UTC [shim] beforeTransaction -> DEBU 5c9 [52e5fe18]Received TRANSACTION, invoking transaction on chaincode(Src:ready, Dst:ready)
+2018-05-15 06:50:29.861 UTC [ccprovider] ExtractStatedbArtifactsFromCCPackage -> DEBU 5ca header.Name = src/github.com/chaincode/chaincode_example02/go/chaincode_example02.go
+2018-05-15 06:50:29.861 UTC [ccprovider] ExtractStatedbArtifactsFromCCPackage -> DEBU 5cb Created statedb artifact tar
+2018-05-15 06:50:29.861 UTC [cceventmgmt] HandleChaincodeInstall -> DEBU 5cc HandleChaincodeInstall() - chaincodeDefinition=&cceventmgmt.ChaincodeDefinition{Name:"mycc", Hash:[]uint8{0x47, 0x6f, 0xca, 0x1a, 0x94, 0x92, 0x74, 0x0, 0x19, 0x71, 0xf1, 0xec, 0x28, 0x36, 0xcb, 0x9, 0x32, 0x1f, 0xb, 0x71, 0x26, 0x8b, 0x37, 0x62, 0xd6, 0x89, 0x31, 0xc9, 0x3f, 0x21, 0x81, 0x34}, Version:"1.0"}
+2018-05-15 06:50:29.861 UTC [lscc] executeInstall -> INFO 5cd Installed Chaincode [mycc] Version [1.0] to peer
+2018-05-15 06:50:29.862 UTC [shim] func1 -> DEBU 5ce [52e5fe18]Transaction completed. Sending COMPLETED
+2018-05-15 06:50:29.862 UTC [shim] func1 -> DEBU 5cf [52e5fe18]Move state message COMPLETED
+2018-05-15 06:50:29.862 UTC [shim] handleMessage -> DEBU 5d0 [52e5fe18]Handling ChaincodeMessage of type: COMPLETED(state:ready)
+2018-05-15 06:50:29.862 UTC [shim] func1 -> DEBU 5d1 [52e5fe18]send state message COMPLETED
+2018-05-15 06:50:29.862 UTC [chaincode] processStream -> DEBU 5d2 [52e5fe18]Received message COMPLETED from shim
+2018-05-15 06:50:29.862 UTC [chaincode] handleMessage -> DEBU 5d3 [52e5fe18]Fabric side Handling ChaincodeMessage of type: COMPLETED in state ready
+2018-05-15 06:50:29.862 UTC [chaincode] handleMessage -> DEBU 5d4 [52e5fe185a795d97a8141d62b0010d84ea66620badd0e4c4e295de9270501f38]HandleMessage- COMPLETED. Notify
+2018-05-15 06:50:29.862 UTC [chaincode] notify -> DEBU 5d5 notifying Txid:52e5fe185a795d97a8141d62b0010d84ea66620badd0e4c4e295de9270501f38, channelID:
+2018-05-15 06:50:29.862 UTC [chaincode] Execute -> DEBU 5d6 Exit
+
+2018-05-15 06:50:29.862 UTC [endorser] callChaincode -> DEBU 5d7 [][52e5fe18] Exit
+2018-05-15 06:50:29.862 UTC [endorser] simulateProposal -> DEBU 5d8 [][52e5fe18] Exit
+2018-05-15 06:50:29.862 UTC [endorser] ProcessProposal -> DEBU 5d9 Exit: request from%!(EXTRA string=172.19.0.9:59038)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
