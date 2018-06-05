@@ -511,7 +511,7 @@ func HandleChaincodeStream(chaincodeSupport *ChaincodeSupport, ctxt context.Cont
 系统链码　和ｐｅｅｒ交互的入口函数：
 func (ipc *inprocContainer) launchInProc(ctxt context.Context, id string, args []string, env []string, ccSupport ccintf.CCSupport) error
 １＞
-	
+
 err := shimStartInProc(env, args, ipc.chaincode, ccRcvPeerSend, peerRcvCCSend)
 ＜１＞　shimStartInProc    = shim.StartInProc
 ＜２＞　调用　err := chatWithPeer(chaincodename, stream, cc)
@@ -537,7 +537,7 @@ cc:
 
 peer:
 接受：ChaincodeMessage_REGISTER消息
-1> 
+1>
 before_ChaincodeMessage_REGISTER消息之前调用回调函数：beforeRegisterEvent
     beforeRegisterEvent：
     内部调用：　err = handler.chaincodeSupport.registerHandler(handler)
@@ -574,7 +574,3 @@ cc:
 
 事件之前回调"before_" + pb.ChaincodeMessage_REGISTERED.String()　－－－　beforeRegistered
 函调函数：beforeRegistered　　只做了打印ｌｏｇ：　chaincodeLogger.Debugf("Received %s, ready for invocations", pb.ChaincodeMessage_REGISTERED)
-
-
-
-

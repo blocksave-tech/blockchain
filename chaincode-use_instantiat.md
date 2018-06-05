@@ -17,7 +17,7 @@ spec = &pb.ChaincodeSpec{
     Input:       input,
 }
 
-Type　等于golang函数　等于１
+Type　等于golang函数　等于1
 ChaincodeId　等于&pb.ChaincodeID{Path: chaincodePath, Name: chaincodeName, Version: chaincodeVersion},　path等于空,名称＼班额本
 Input 等于input := &pb.ChaincodeInput{}　如下等于初始化参数
 －－
@@ -107,39 +107,3 @@ Signature: signature　对Proposal对象的签名
 ｐｅｅｒ节点处理
 ProcessProposal函数处理:
 --vr, err := e.preProcess(signedProp) 函数处理：
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

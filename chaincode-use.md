@@ -2,11 +2,10 @@ peer客户端install链码：
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 用户链码:
 用户链码安装：
-peer chaincode install -n mycc -v ${VERSION} -l ${LANGUAGE} -p ${CC_SRC_PATH} 
+peer chaincode install -n mycc -v ${VERSION} -l ${LANGUAGE} -p ${CC_SRC_PATH}
 
 链码实例化:
 peer chaincode instantiate -o orderer.example.com:7050 -C $CHANNEL_NAME -n mycc -l ${LANGUAGE} -v ${VERSION} -c '{"Args":["init","a","100","b","200"]}' -P "OR	('Org1MSP.peer','Org2MSP.peer')"
-
 
 
 version: 链码版本
@@ -33,10 +32,13 @@ CodePackage　用户链码打包为 .tar.gz　　　二进制链码　代码程�
 
 发送的数据结构：install
 ccinp = &peer.ChaincodeInput{Args: [][]byte{[]byte(propType), b}}
+propType　等于＂install＂
+ｂ等于上面chaincodeDeploymentSpec　Marshal后的数据
+
 Args：等于＂install＂ 和 chaincodeDeploymentSpec的ｍｓｇ信息
 Decorations　＝　ｎｉｌ
 
-
+构造：
 ChaincodeInvocationSpec数据结构：
 //wrap the deployment in an invocation spec to lscc...
 lsccSpec := &peer.ChaincodeInvocationSpec{
@@ -67,7 +69,7 @@ hdrBytes, err := proto.Marshal(hdr)
 ccHdrExtBytes　等于：
 	ccHdrExt := &peer.ChaincodeHeaderExtension{ChaincodeId: cis.ChaincodeSpec.ChaincodeId}
 	ccHdrExtBytes, err := proto.Marshal(ccHdrExt)
-    
+
     cis.ChaincodeSpec.ChaincodeId　等于&peer.ChaincodeID{Name: "lscc"},
     cis　等于ChaincodeInvocationSpec
 
@@ -81,7 +83,7 @@ if err != nil {
     return nil, "", err
 }
 
-transientMap等于ｎｉｌ
+transientMap等于nil
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 
 创建一个SignedProposal对象：
@@ -248,7 +250,7 @@ hdr等于：
 		Extension: ccHdrExtBytes,
 		Epoch:     epoch}), 等于0
 		SignatureHeader: MarshalOrPanic(&common.SignatureHeader{Nonce: nonce, Creator: creator})}
-        
+
 ccHdrExtBytes等于:
 	ccHdrExt := &peer.ChaincodeHeaderExtension{ChaincodeId: cis.ChaincodeSpec.ChaincodeId} ChaincodeId是cc的name path="" 版本号
 	ccHdrExtBytes, err := proto.Marshal(ccHdrExt)
@@ -259,14 +261,14 @@ cisBytes, err := proto.Marshal(cis)  cis就是ChaincodeInvocationSpec CIS的简�
 	if err != nil {
 		return nil, "", err
 	}
-    
+
 ccPropPayload := &peer.ChaincodeProposalPayload{Input: cisBytes, TransientMap: transientMap} transientMap等于nil
 	ccPropPayloadBytes, err := proto.Marshal(ccPropPayload)
 	if err != nil {
 		return nil, "", err
 	}
-    
-    
+
+
 构造签名的SignedProposal对象:
 SignedProposal{ProposalBytes: propBytes, Signature: signature}
 propBytes是对Proposal对象的Marshal后的[]byte类型数据;
@@ -292,7 +294,7 @@ Envelope{Payload: paylBytes, Signature: sig}
 paylBytes数据类型是:common.Payload{Header: hdr, Data: txBytes} 的Marshal后的结果;
 sig是对paylBytes签名后的数据;
 
-Header hdr.SignatureHeader数据是 
+Header hdr.SignatureHeader数据是
    -----> 原始提议的SignatureHeader: MarshalOrPanic(&common.SignatureHeader{Nonce: nonce, Creator: creator})}数据
 
 Payload: capBytes数据是:
@@ -307,7 +309,7 @@ Input是cisBytes, err := proto.Marshal(cis)  cis就是ChaincodeInvocationSpec CI
 	if err != nil {
 		return nil, "", err
 	}
-    
+
 hdrExt.PayloadVisibility 等于nil
 
 所以GetBytesProposalPayloadForTx返回返回 --->
@@ -328,21 +330,3 @@ cea := &peer.ChaincodeEndorsedAction{ProposalResponsePayload: resps[0].Payload, 
 
 resps[0].Payload 背书返回的数据 ---- 需要调查?
 endorsements背书的peer节点 --- 需要调查?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

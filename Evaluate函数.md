@@ -246,7 +246,7 @@ lscc - support.go :
 ｌｓｃｃ验证交易签名：
 func (s *supportImpl) CheckInstantiationPolicy(signedProp *pb.SignedProposal, chainName string, instantiationPolicy []byte) error {
 	err = instPol.Evaluate(sd)
-    
+
 
 
 
@@ -256,7 +256,7 @@ bug问题导致分析
 peer channel create -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx
 
 报错:
-InitCmdFactory - Endorser and orderer connectionst initialized - 
+InitCmdFactory - Endorser and orderer connectionst initialized -
 ./peer/channel/channel.go:157:  logger.Infof("Endorser and orderer connections initialized")
 
 got unexpected status FORBIDDEN --- ssss
@@ -269,8 +269,8 @@ got unexpected status FORBIDDEN --- ssss
 代码：
 func (imp *implicitMetaPolicy) Evaluate(signatureSet []*cb.SignedData) error {
    logger.Debugf("This is an implicit meta policy, it will trigger other policy evaluations, whose failures may be benign")
-   remaining := imp.threshold 
-   
+   remaining := imp.threshold
+
        return fmt.Errorf("Failed to reach implicit threshold of %d sub-policies, required %d remaining", imp.threshold, remaining)
 }
 
@@ -348,7 +348,7 @@ MIICKDCCAc+gAwIBAgIRAPtWbpxwUQQ7ZgKllvpEf6gwCgYIKoZIzj0EAwIwczEL
 
 
 查看channl.tx文件
- cat channel.tx 
+ cat channel.tx
 
 �
 
@@ -387,7 +387,7 @@ Consortium
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 查看正常的channel.tx文件：
- cat channel.tx 
+ cat channel.tx
 
 �
 
@@ -462,4 +462,3 @@ BAMCA0gAMEUCIQD7eZyZSQk23JzFQb744q+8Lsp5l8n4jh4qYuN7xGCrdAIgfmqe
 
 错误信息主要是：
 2018-05-21 07:10:43.061 UTC [policies] func1 -> DEBU 3b2 Evaluation Failed: Only 0 policies were satisfied, but needed 1 of [ Org1MSP.Readers Org2MSP.Readers Org3MSP.Readers ]
-

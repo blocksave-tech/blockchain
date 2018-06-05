@@ -30,7 +30,7 @@ var systemChaincodes = []*SystemChaincode{
 
 #### 部署：
 
-	//initialize system chaincodes 
+	//initialize system chaincodes
     初始化系统链码：
 ＋276	initSysCCs()
 
@@ -185,7 +185,7 @@ type CCContext struct {
 	//Proposal for this invoke (if any)
 	//this is kept here just in case we need to pass something
 	//from this to the chaincode
-	Proposal *pb.Proposal = nil 
+	Proposal *pb.Proposal = nil
 
 	//this is not set but computed (note that this is not exported. use GetCanonicalName)
 	canonicalName string = 系统链名＋ｖｅｒｓｉｏｎ
@@ -225,7 +225,7 @@ Execute执行系统链初始化：
 cctyp := pb.ChaincodeMessage_INIT
 cMsg 等于系统链初始化init参数
 cMsg.Decorations　＝　nil
-        
+
 ccMsg, err = createCCMessage(cctyp, cccid.ChainID, cccid.TxID, cMsg)
 haincodeMessage{Type: typ, Payload: payload, Txid: txid, ChannelId: cid}
 Type := pb.ChaincodeMessage_INIT
@@ -248,7 +248,7 @@ type CCContext struct {
 	TxID string　　　＝　version := util.GetSysCCVersion()　ＵＵＩＤ
 	Syscc bool　＝　ｔｒue
 	SignedProposal *pb.SignedProposal = nil
-	Proposal *pb.Proposal = nil 
+	Proposal *pb.Proposal = nil
 	canonicalName string = 系统链名＋ｖｅｒｓｉｏｎ
 	ProposalDecorations map[string][]byte = nil
 }
@@ -306,7 +306,7 @@ ccl.cds.ChaincodeSpec.Type　等于pb.ChaincodeSpec_Type_value["GOLANG"]
 
 此函数返回参数：
 args：chaincode　-peer.address = 0.0.0.0:7051
-envs:CORE_CHAINCODE_ID_NAME="系统链＋version" + CORE_PEER_TLS_ENABLED=true／false + [CORE_TLS_CLIENT_KEY_PATH=] + CORE_CHAINCODE_LOGGING_LEVEL= info + CORE_CHAINCODE_LOGGING_SHIM= waing + CORE_CHAINCODE_LOGGING_FORMAT= "%sf" 
+envs:CORE_CHAINCODE_ID_NAME="系统链＋version" + CORE_PEER_TLS_ENABLED=true／false + [CORE_TLS_CLIENT_KEY_PATH=] + CORE_CHAINCODE_LOGGING_LEVEL= info + CORE_CHAINCODE_LOGGING_SHIM= waing + CORE_CHAINCODE_LOGGING_FORMAT= "%sf"
 filesToUpload 等于nil
 
 ccl.ccSupport.preLaunchSetup(canName, notfy)　函数：
@@ -423,7 +423,7 @@ func (vm *InprocVM) Deploy(ctxt context.Context, ccid ccintf.CCID, args []string
 	stopChan  chan struct{}}
     instName：　系统链码－ｖｅｒｓｉｏｎ
     args：chaincode　-peer.address = 0.0.0.0:7051
-    env：CORE_CHAINCODE_ID_NAME="系统链＋version" + CORE_PEER_TLS_ENABLED=true／false + [CORE_TLS_CLIENT_KEY_PATH=] + CORE_CHAINCODE_LOGGING_LEVEL= info + CORE_CHAINCODE_LOGGING_SHIM= waing + CORE_CHAINCODE_LOGGING_FORMAT= "%sf" 
+    env：CORE_CHAINCODE_ID_NAME="系统链＋version" + CORE_PEER_TLS_ENABLED=true／false + [CORE_TLS_CLIENT_KEY_PATH=] + CORE_CHAINCODE_LOGGING_LEVEL= info + CORE_CHAINCODE_LOGGING_SHIM= waing + CORE_CHAINCODE_LOGGING_FORMAT= "%sf"
 
 
 　　在getInstance中初始化系统链实例ｍａｐ对象：instRegistry
@@ -508,9 +508,9 @@ Execute函数中调用： theChaincodeSupport.Execute　函数：
 其中调用：
 	resp, err := theChaincodeSupport.Execute(ctxt, cccid, ccMsg, theChaincodeSupport.executetimeout)
     theChaincodeSupport是全局变量　在chaincode-1.mk介绍过
-    
+
     theChaincodeSupport.runningChaincodes 变量：
-    
+
     type runningChaincodes struct {
 	sync.RWMutex
 	// chaincode environment for each chaincode
